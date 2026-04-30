@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BookOpenText, Trophy, Type, UserRound } from "lucide-react";
 
+import { LearningStatePreview } from "@/components/dashboard/learning-state-preview";
 import { PageContainer } from "@/components/layout/page-container";
 import { ChildButton } from "@/components/ui/child-button";
 import { ChildCard } from "@/components/ui/child-card";
@@ -96,6 +97,8 @@ export default function HomePage() {
           </div>
         </div>
       </ChildCard>
+
+      <LearningStatePreview />
     </PageContainer>
   );
 }

@@ -4,6 +4,7 @@ import { Atkinson_Hyperlegible } from "next/font/google";
 import "./globals.css";
 
 import { AppShell } from "@/components/layout/app-shell";
+import { AppProviders } from "@/components/providers/app-providers";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
@@ -45,7 +46,9 @@ export default function RootLayout({
       className={cn("h-full scroll-smooth", readableFont.variable)}
     >
       <body className="min-h-dvh antialiased">
-        <AppShell>{children}</AppShell>
+        <AppProviders>
+          <AppShell>{children}</AppShell>
+        </AppProviders>
       </body>
     </html>
   );
