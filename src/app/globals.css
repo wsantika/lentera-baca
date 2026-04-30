@@ -89,4 +89,104 @@
     background: #fde68a;
     color: #3f2a05;
   }
+
+  @layer base {
+    :root {
+      --lentera-warm-bg: #fff8ed;
+      --lentera-soft-card: #ffffff;
+      --lentera-ink: #24301f;
+      --lentera-muted-ink: #76685f;
+      --lentera-amber: #fde68a;
+      --lentera-orange-border: #fed7aa;
+    }
+
+    html {
+      font-variant-ligatures: none;
+    }
+
+    body {
+      min-width: 320px;
+    }
+
+    :focus-visible {
+      outline: none;
+    }
+
+    button,
+    a,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+  }
+
+  @layer components {
+    .lentera-page {
+      @apply mx-auto flex w-full max-w-5xl flex-col gap-6 px-4 py-5 sm:px-6;
+    }
+
+    .lentera-section {
+      @apply rounded-[2rem] border border-orange-100 bg-white/85 p-5 shadow-sm shadow-orange-100/70 sm:p-6;
+    }
+
+    .lentera-title {
+      @apply text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl;
+    }
+
+    .lentera-description {
+      @apply text-base leading-7 text-muted-foreground sm:text-lg;
+    }
+
+    .lentera-touch-target {
+      @apply min-h-14 min-w-14;
+    }
+
+    .lentera-child-focus {
+      @apply focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-amber-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+    }
+
+    .text-size-normal {
+      font-size: 1rem;
+    }
+
+    .text-size-large {
+      font-size: 1.125rem;
+    }
+
+    .text-size-extra-large {
+      font-size: 1.25rem;
+    }
+
+    .high-contrast {
+      --background: #fffdf5;
+      --foreground: #111827;
+      --card: #ffffff;
+      --card-foreground: #111827;
+      --muted: #f3f4f6;
+      --muted-foreground: #374151;
+      --border: #111827;
+      --ring: #111827;
+    }
+
+    .high-contrast .lentera-section {
+      @apply border-2 border-foreground shadow-none;
+    }
+
+    .high-contrast a,
+    .high-contrast button {
+      @apply focus-visible:ring-foreground;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      scroll-behavior: auto !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
 }
