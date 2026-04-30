@@ -2,14 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  BookOpenText,
-  Home,
-  Trophy,
-  Type,
-  UserRound,
-  type LucideIcon,
-} from "lucide-react";
+import { Home, Trophy, UserRound, type LucideIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
@@ -22,27 +15,17 @@ type NavigationItem = {
 const navigationItems: NavigationItem[] = [
   {
     href: "/",
-    label: "Beranda",
+    label: "Home",
     icon: Home,
   },
   {
-    href: "/letters",
-    label: "Huruf",
-    icon: Type,
-  },
-  {
-    href: "/reading",
-    label: "Baca",
-    icon: BookOpenText,
-  },
-  {
     href: "/leaderboard",
-    label: "Poin",
+    label: "Ranking",
     icon: Trophy,
   },
   {
     href: "/profile",
-    label: "Profil",
+    label: "Profile",
     icon: UserRound,
   },
 ];
@@ -53,10 +36,10 @@ export function BottomNavigation() {
   return (
     <nav
       aria-label="Navigasi utama"
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-orange-100/80 bg-background/90 px-3 pb-[calc(env(safe-area-inset-bottom)+0.75rem)] pt-2 backdrop-blur-md"
+      className="fixed inset-x-0 bottom-0 z-40 px-4 pb-[calc(env(safe-area-inset-bottom)+1rem)]"
     >
-      <div className="mx-auto max-w-5xl">
-        <ul className="grid grid-cols-5 gap-1 rounded-[2rem] border border-orange-100 bg-white/90 p-2 shadow-lg shadow-orange-100/70">
+      <div className="mx-auto max-w-md rounded-[2rem] border border-orange-100 bg-white/95 p-3 shadow-[0_12px_40px_rgba(209,118,17,0.12)] backdrop-blur-md">
+        <ul className="grid grid-cols-3 gap-2">
           {navigationItems.map((item) => {
             const Icon = item.icon;
             const isActive =
@@ -70,11 +53,11 @@ export function BottomNavigation() {
                   href={item.href}
                   aria-current={isActive ? "page" : undefined}
                   className={cn(
-                    "flex min-h-16 flex-col items-center justify-center gap-1 rounded-3xl px-2 py-2 text-center text-xs font-bold transition",
-                    "focus-visible:ring-4 focus-visible:ring-amber-300/60",
+                    "flex min-h-[72px] flex-col items-center justify-center gap-1 rounded-full px-3 py-2 text-center text-sm font-semibold transition",
+                    "focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-amber-300/70",
                     isActive
-                      ? "bg-amber-200 text-amber-950 shadow-sm"
-                      : "text-muted-foreground hover:bg-amber-50 hover:text-foreground",
+                      ? "bg-orange-400 text-white shadow-sm"
+                      : "text-zinc-500 hover:bg-orange-50 hover:text-zinc-800",
                   )}
                 >
                   <Icon className="size-5" aria-hidden="true" />
