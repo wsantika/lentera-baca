@@ -25,6 +25,14 @@ export const metadata: Metadata = {
   authors: [{ name: "Santika" }],
   creator: "Santika",
   metadataBase: new URL("https://github.com/wsantika/lentera-baca"),
+  appleWebApp: {
+    capable: true,
+    title: siteConfig.name,
+    statusBarStyle: "default",
+  },
+  formatDetection: {
+    telephone: false,
+  },
 };
 
 export const viewport: Viewport = {
