@@ -141,17 +141,30 @@ export function LearningStoreProvider({ children }: { children: ReactNode }) {
   const [isHydrated, setIsHydrated] = useState(false);
 
   useEffect(() => {
-    try {
-      const storedValue = window.localStorage.getItem(STORAGE_KEY);
+    let isCancelled = false;
 
-      if (storedValue) {
-        setState(normalizeState(JSON.parse(storedValue)));
+    const timeoutId = window.setTimeout(() => {
+      if (isCancelled) {
+        return;
       }
-    } catch {
-      setState(defaultState);
-    } finally {
-      setIsHydrated(true);
-    }
+
+      try {
+        const storedValue = window.localStorage.getItem(STORAGE_KEY);
+
+        setState(
+          storedValue ? normalizeState(JSON.parse(storedValue)) : defaultState,
+        );
+      } catch {
+        setState(defaultState);
+      } finally {
+        setIsHydrated(true);
+      }
+    }, 0);
+
+    return () => {
+      isCancelled = true;
+      window.clearTimeout(timeoutId);
+    };
   }, []);
 
   useEffect(() => {
