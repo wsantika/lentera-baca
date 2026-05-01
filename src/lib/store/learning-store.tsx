@@ -14,10 +14,13 @@ const STORAGE_KEY = "lentera-baca-learning-state-v1";
 
 export type TextSize = "normal" | "large" | "extra-large";
 
+export type LearningMode = "easy" | "medium";
+
 export type LearningSettings = {
   textSize: TextSize;
   highContrast: boolean;
   autoAudio: boolean;
+  learningMode: LearningMode;
 };
 
 export type LearningState = {
@@ -45,6 +48,7 @@ const defaultSettings: LearningSettings = {
   textSize: "normal",
   highContrast: false,
   autoAudio: false,
+  learningMode: "easy",
 };
 
 const defaultState: LearningState = {
@@ -77,6 +81,14 @@ function normalizeTextSize(value: unknown): TextSize {
   return "normal";
 }
 
+function normalizeLearningMode(value: unknown): LearningMode {
+  if (value === "medium") {
+    return "medium";
+  }
+
+  return "easy";
+}
+
 function normalizeStringArray(value: unknown): string[] {
   if (!Array.isArray(value)) {
     return [];
@@ -105,6 +117,7 @@ function normalizeState(value: unknown): LearningState {
       textSize: normalizeTextSize(record.settings?.textSize),
       highContrast: Boolean(record.settings?.highContrast),
       autoAudio: Boolean(record.settings?.autoAudio),
+      learningMode: normalizeLearningMode(record.settings?.learningMode),
     },
     lastActiveDate:
       typeof record.lastActiveDate === "string" ? record.lastActiveDate : null,
