@@ -1,0 +1,24 @@
+"use client";
+
+import { useEffect } from "react";
+
+export function ServiceWorkerRegister() {
+  useEffect(() => {
+    if (process.env.NODE_ENV !== "production") {
+      return;
+    }
+
+    if (!("serviceWorker" in navigator)) {
+      return;
+    }
+
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("/sw.js").catch(() => {
+        // Service worker registration failed.
+        // Keep this silent so the app still works normally.
+      });
+    });
+  }, []);
+
+  return null;
+}
