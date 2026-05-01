@@ -14,6 +14,8 @@ export function ReadingSummaryCard({
   percentage,
   level,
 }: ReadingSummaryCardProps) {
+  const progressLabel = `${completedCount} dari ${totalCount} soal selesai`;
+
   return (
     <Link
       href="/reading"
@@ -43,11 +45,18 @@ export function ReadingSummaryCard({
         </div>
 
         <div className="mt-6 flex items-center justify-between gap-4 text-base font-semibold text-green-700">
-          <p>{completedCount} soal selesai</p>
+          <p aria-label={progressLabel}>{completedCount} soal selesai</p>
           <p>{percentage}%</p>
         </div>
 
-        <div className="mt-3 h-4 overflow-hidden rounded-full bg-stone-300">
+        <div
+          className="mt-3 h-4 overflow-hidden rounded-full bg-stone-300"
+          aria-label={progressLabel}
+          role="progressbar"
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-valuenow={percentage}
+        >
           <div
             className="h-full rounded-full bg-gradient-to-r from-green-700 to-lime-400"
             style={{ width: `${percentage}%` }}
