@@ -15,7 +15,6 @@ import {
   SlidersHorizontal,
   Star,
   Trophy,
-  UserRound,
 } from "lucide-react";
 
 import {
