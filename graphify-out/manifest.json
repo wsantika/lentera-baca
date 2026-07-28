@@ -288,5 +288,115 @@
     "mtime": 1777557535.4175558,
     "ast_hash": "ee17fd1c97c735e9f3564e3f5251f125",
     "semantic_hash": "ee17fd1c97c735e9f3564e3f5251f125"
+  },
+  "src/lib/supabase/database.types.ts": {
+    "mtime": 1785244270.4228961,
+    "ast_hash": "f47e19a76d7aa61a80632d225b4a564b",
+    "semantic_hash": ""
+  },
+  "supabase/migrations/20260728130513_init_v2_schema.sql": {
+    "mtime": 1785243949.783119,
+    "ast_hash": "20ed07e98748f2da3294f1f1f13a58f5",
+    "semantic_hash": ""
+  },
+  "supabase/seed.sql": {
+    "mtime": 1785243897.4048476,
+    "ast_hash": "e9046e6e9dcfb101490100edde2808e4",
+    "semantic_hash": ""
+  },
+  ".agents/rules/graphify.md": {
+    "mtime": 1785242570.0702548,
+    "ast_hash": "a0e4d192b9e2e17256124dbfc8e24e6a",
+    "semantic_hash": ""
+  },
+  ".agents/workflows/graphify.md": {
+    "mtime": 1785242816.8638167,
+    "ast_hash": "637776aa6f7496d069afe7520c845c8a",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1777557605.697698,
+    "ast_hash": "9e09241799026ac05be315a2f0b50055",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1777629732.9194903,
+    "ast_hash": "fe010aede3a6e244d845560a2b22747d",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1785159073.9264567,
+    "ast_hash": "e246b6406d8449f9e89d3835665cd55a",
+    "semantic_hash": ""
+  },
+  "docker-compose.yml": {
+    "mtime": 1785159073.9275718,
+    "ast_hash": "9950a40ce316ee8be85372e415cbb44a",
+    "semantic_hash": ""
+  },
+  "docs/AI_AGENT_GUIDELINES.md": {
+    "mtime": 1785157294.7875316,
+    "ast_hash": "73b7f0ee8193d0ffcd33cbd1e7bc0c19",
+    "semantic_hash": ""
+  },
+  "docs/DATABASE_SCHEMA.md": {
+    "mtime": 1785243872.8715372,
+    "ast_hash": "18716a49e4093e34ca0317cbff44e5dd",
+    "semantic_hash": ""
+  },
+  "docs/FOLDER_STRUCTURE_AND_ARCHITECTURE.md": {
+    "mtime": 1785157308.3209145,
+    "ast_hash": "9cc22a674fbc92c67888b0fbb4d59ed1",
+    "semantic_hash": ""
+  },
+  "docs/GITFLOW_AND_CONVENTIONS.md": {
+    "mtime": 1785157303.5983305,
+    "ast_hash": "c5a9f581a967fe5f0ff670a777109879",
+    "semantic_hash": ""
+  },
+  "docs/INFRASTRUCTURE_AND_CICD.md": {
+    "mtime": 1785157308.298221,
+    "ast_hash": "74f05d62cf9122c448d930da250555cf",
+    "semantic_hash": ""
+  },
+  "docs/README.md": {
+    "mtime": 1785157308.4296856,
+    "ast_hash": "7cd9899276c0d10a9d8b669377c71e1d",
+    "semantic_hash": ""
+  },
+  "docs/mvp-accessibility-qa.md": {
+    "mtime": 1777629732.9321954,
+    "ast_hash": "87b1918415ffd229d41dadec11a97e0c",
+    "semantic_hash": ""
+  },
+  "public/file.svg": {
+    "mtime": 1776588665.0774715,
+    "ast_hash": "d09f95206c3fa0bb9bd9fefabfd0ea71",
+    "semantic_hash": ""
+  },
+  "public/globe.svg": {
+    "mtime": 1776588665.098001,
+    "ast_hash": "2aaafa6a49b6563925fe440891e32717",
+    "semantic_hash": ""
+  },
+  "public/icon.svg": {
+    "mtime": 1777629732.9331918,
+    "ast_hash": "b8c5da390deadb3f6792ec9d44e40a9e",
+    "semantic_hash": ""
+  },
+  "public/next.svg": {
+    "mtime": 1776588665.1201396,
+    "ast_hash": "8e061864f388b47f33a1c3780831193e",
+    "semantic_hash": ""
+  },
+  "public/vercel.svg": {
+    "mtime": 1776588665.1395702,
+    "ast_hash": "c0af2f507b369b085b35ef4bbe3bcf1e",
+    "semantic_hash": ""
+  },
+  "public/window.svg": {
+    "mtime": 1776588665.156019,
+    "ast_hash": "a2760511c65806022ad20adf74370ff3",
+    "semantic_hash": ""
   }
 }
