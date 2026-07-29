@@ -30,8 +30,17 @@ const navigationItems: NavigationItem[] = [
   },
 ];
 
+// Routes that should NOT show the child-oriented bottom navigation
+const hiddenRoutes = ["/login", "/signup", "/parent"];
+
 export function BottomNavigation() {
   const pathname = usePathname();
+
+  const shouldHide = hiddenRoutes.some((route) =>
+    pathname.startsWith(route)
+  );
+
+  if (shouldHide) return null;
 
   return (
     <nav
