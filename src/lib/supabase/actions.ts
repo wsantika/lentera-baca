@@ -75,3 +75,95 @@ export async function signOut() {
   revalidatePath("/", "layout");
   redirect("/");
 }
+
+export async function setActiveChild(childId: string) {
+  const { cookies } = await import("next/headers");
+  const cookieStore = await cookies();
+  cookieStore.set("lentera_active_child", childId, {
+    path: "/",
+    maxAge: 60 * 60 * 24 * 30, // 30 days
+  });
+  revalidatePath("/", "layout");
+}
+
+export async function createChildProfile(formData: FormData) {
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  
+  if (!user) {
+    throw new Error("Unauthorized");
+  }
+
+  const displayName = formData.get("display_name") as string;
+  const ageStr = formData.get("age") as string;
+  const age = ageStr ? parseInt(ageStr, 10) : null;
+  const avatarEmoji = (formData.get("avatar_emoji") as string) || "🦁";
+
+  const { error } = await supabase.from("child_profiles").insert({
+    parent_id: user.id,
+    display_name: displayName,
+    age: age,
+    avatar_emoji: avatarEmoji,
+  });
+
+  if (error) {
+    console.error(error);
+    throw new Error("Failed to create child profile");
+  }
+
+  revalidatePath("/parent");
+}
+
+export async function updateChildProfile(childId: string, formData: FormData) {
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  
+  if (!user) {
+    throw new Error("Unauthorized");
+  }
+
+  const displayName = formData.get("display_name") as string;
+  const ageStr = formData.get("age") as string;
+  const age = ageStr ? parseInt(ageStr, 10) : null;
+  const avatarEmoji = (formData.get("avatar_emoji") as string) || "🦁";
+
+  const { error } = await supabase
+    .from("child_profiles")
+    .update({
+      display_name: displayName,
+      age: age,
+      avatar_emoji: avatarEmoji,
+    })
+    .eq("id", childId)
+    .eq("parent_id", user.id);
+
+  if (error) {
+    console.error(error);
+    throw new Error("Failed to update child profile");
+  }
+
+  revalidatePath("/parent");
+}
+
+export async function deleteChildProfile(childId: string) {
+  const supabase = await createClient();
+  
+  const { error } = await supabase
+    .from("child_profiles")
+    .delete()
+    .eq("id", childId);
+
+  if (error) {
+    console.error(error);
+    throw new Error("Failed to delete child profile");
+  }
+
+  const { cookies } = await import("next/headers");
+  const cookieStore = await cookies();
+  const activeChild = cookieStore.get("lentera_active_child")?.value;
+  if (activeChild === childId) {
+    cookieStore.delete("lentera_active_child");
+  }
+
+  revalidatePath("/parent");
+}

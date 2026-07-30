@@ -924,7 +924,7 @@
       "_origin": "ast",
       "id": "src_app_auth_callback_route",
       "community": 21,
-      "community_name": "actions.ts",
+      "community_name": "createClient",
       "norm_label": "route.ts"
     },
     {
@@ -935,7 +935,7 @@
       "_origin": "ast",
       "id": "src_app_auth_callback_route_get",
       "community": 21,
-      "community_name": "actions.ts",
+      "community_name": "createClient",
       "norm_label": "get()"
     },
     {
@@ -945,52 +945,52 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app_layout",
-      "community": 11,
-      "community_name": "learning-store.tsx",
+      "community": 8,
+      "community_name": "app/layout.tsx",
       "norm_label": "app/layout.tsx"
     },
     {
       "label": "readableFont",
       "file_type": "code",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L12",
+      "source_location": "L11",
       "_origin": "ast",
       "id": "src_app_layout_readablefont",
-      "community": 11,
-      "community_name": "learning-store.tsx",
+      "community": 8,
+      "community_name": "app/layout.tsx",
       "norm_label": "readablefont"
     },
     {
       "label": "metadata",
       "file_type": "code",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L19",
+      "source_location": "L18",
       "_origin": "ast",
       "id": "src_app_layout_metadata",
-      "community": 11,
-      "community_name": "learning-store.tsx",
+      "community": 8,
+      "community_name": "app/layout.tsx",
       "norm_label": "metadata"
     },
     {
       "label": "viewport",
       "file_type": "code",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L39",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "src_app_layout_viewport",
-      "community": 11,
-      "community_name": "learning-store.tsx",
+      "community": 8,
+      "community_name": "app/layout.tsx",
       "norm_label": "viewport"
     },
     {
       "label": "RootLayout()",
       "file_type": "code",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L47",
+      "source_location": "L46",
       "_origin": "ast",
       "id": "src_app_layout_rootlayout",
-      "community": 11,
-      "community_name": "learning-store.tsx",
+      "community": 8,
+      "community_name": "app/layout.tsx",
       "norm_label": "rootlayout()"
     },
     {
@@ -1078,7 +1078,7 @@
       "_origin": "ast",
       "id": "src_app_login_page",
       "community": 21,
-      "community_name": "actions.ts",
+      "community_name": "createClient",
       "norm_label": "login/page.tsx"
     },
     {
@@ -1089,7 +1089,7 @@
       "_origin": "ast",
       "id": "src_app_login_page_metadata",
       "community": 21,
-      "community_name": "actions.ts",
+      "community_name": "createClient",
       "norm_label": "metadata"
     },
     {
@@ -1100,7 +1100,7 @@
       "_origin": "ast",
       "id": "src_app_login_page_loginpage",
       "community": 21,
-      "community_name": "actions.ts",
+      "community_name": "createClient",
       "norm_label": "loginpage()"
     },
     {
@@ -1210,29 +1210,29 @@
       "_origin": "ast",
       "id": "src_app_parent_page",
       "community": 21,
-      "community_name": "actions.ts",
+      "community_name": "createClient",
       "norm_label": "parent/page.tsx"
     },
     {
       "label": "metadata",
       "file_type": "code",
       "source_file": "src/app/parent/page.tsx",
-      "source_location": "L11",
+      "source_location": "L9",
       "_origin": "ast",
       "id": "src_app_parent_page_metadata",
       "community": 21,
-      "community_name": "actions.ts",
+      "community_name": "createClient",
       "norm_label": "metadata"
     },
     {
       "label": "ParentDashboardPage()",
       "file_type": "code",
       "source_file": "src/app/parent/page.tsx",
-      "source_location": "L16",
+      "source_location": "L14",
       "_origin": "ast",
       "id": "src_app_parent_page_parentdashboardpage",
       "community": 21,
-      "community_name": "actions.ts",
+      "community_name": "createClient",
       "norm_label": "parentdashboardpage()"
     },
     {
@@ -1320,7 +1320,7 @@
       "_origin": "ast",
       "id": "src_app_signup_page",
       "community": 21,
-      "community_name": "actions.ts",
+      "community_name": "createClient",
       "norm_label": "signup/page.tsx"
     },
     {
@@ -1331,7 +1331,7 @@
       "_origin": "ast",
       "id": "src_app_signup_page_metadata",
       "community": 21,
-      "community_name": "actions.ts",
+      "community_name": "createClient",
       "norm_label": "metadata"
     },
     {
@@ -1342,7 +1342,7 @@
       "_origin": "ast",
       "id": "src_app_signup_page_signuppage",
       "community": 21,
-      "community_name": "actions.ts",
+      "community_name": "createClient",
       "norm_label": "signuppage()"
     },
     {
@@ -1353,7 +1353,7 @@
       "_origin": "ast",
       "id": "src_components_auth_login_page_content",
       "community": 21,
-      "community_name": "actions.ts",
+      "community_name": "createClient",
       "norm_label": "login-page-content.tsx"
     },
     {
@@ -1364,7 +1364,7 @@
       "_origin": "ast",
       "id": "src_components_auth_login_page_content_googleicon",
       "community": 21,
-      "community_name": "actions.ts",
+      "community_name": "createClient",
       "norm_label": "googleicon()"
     },
     {
@@ -1375,7 +1375,7 @@
       "_origin": "ast",
       "id": "src_components_auth_login_page_content_loginform",
       "community": 21,
-      "community_name": "actions.ts",
+      "community_name": "createClient",
       "norm_label": "loginform()"
     },
     {
@@ -1386,7 +1386,7 @@
       "_origin": "ast",
       "id": "src_components_auth_login_page_content_loginpagecontent",
       "community": 21,
-      "community_name": "actions.ts",
+      "community_name": "createClient",
       "norm_label": "loginpagecontent()"
     },
     {
@@ -1397,7 +1397,7 @@
       "_origin": "ast",
       "id": "src_components_auth_signup_page_content",
       "community": 21,
-      "community_name": "actions.ts",
+      "community_name": "createClient",
       "norm_label": "signup-page-content.tsx"
     },
     {
@@ -1408,7 +1408,7 @@
       "_origin": "ast",
       "id": "src_components_auth_signup_page_content_googleicon",
       "community": 21,
-      "community_name": "actions.ts",
+      "community_name": "createClient",
       "norm_label": "googleicon()"
     },
     {
@@ -1419,7 +1419,7 @@
       "_origin": "ast",
       "id": "src_components_auth_signup_page_content_signupform",
       "community": 21,
-      "community_name": "actions.ts",
+      "community_name": "createClient",
       "norm_label": "signupform()"
     },
     {
@@ -1430,7 +1430,7 @@
       "_origin": "ast",
       "id": "src_components_auth_signup_page_content_signuppagecontent",
       "community": 21,
-      "community_name": "actions.ts",
+      "community_name": "createClient",
       "norm_label": "signuppagecontent()"
     },
     {
@@ -1682,8 +1682,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_layout_app_shell",
-      "community": 11,
-      "community_name": "learning-store.tsx",
+      "community": 8,
+      "community_name": "app/layout.tsx",
       "norm_label": "app-shell.tsx"
     },
     {
@@ -1693,8 +1693,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_components_layout_app_shell_appshellprops",
-      "community": 11,
-      "community_name": "learning-store.tsx",
+      "community": 8,
+      "community_name": "app/layout.tsx",
       "norm_label": "appshellprops"
     },
     {
@@ -1704,8 +1704,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_components_layout_app_shell_appshell",
-      "community": 11,
-      "community_name": "learning-store.tsx",
+      "community": 8,
+      "community_name": "app/layout.tsx",
       "norm_label": "appshell()"
     },
     {
@@ -1715,8 +1715,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_layout_bottom_navigation",
-      "community": 11,
-      "community_name": "learning-store.tsx",
+      "community": 8,
+      "community_name": "app/layout.tsx",
       "norm_label": "bottom-navigation.tsx"
     },
     {
@@ -1726,8 +1726,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_components_layout_bottom_navigation_navigationitem",
-      "community": 11,
-      "community_name": "learning-store.tsx",
+      "community": 8,
+      "community_name": "app/layout.tsx",
       "norm_label": "navigationitem"
     },
     {
@@ -1737,8 +1737,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_components_layout_bottom_navigation_navigationitems",
-      "community": 11,
-      "community_name": "learning-store.tsx",
+      "community": 8,
+      "community_name": "app/layout.tsx",
       "norm_label": "navigationitems"
     },
     {
@@ -1748,8 +1748,8 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "src_components_layout_bottom_navigation_hiddenroutes",
-      "community": 11,
-      "community_name": "learning-store.tsx",
+      "community": 8,
+      "community_name": "app/layout.tsx",
       "norm_label": "hiddenroutes"
     },
     {
@@ -1759,8 +1759,8 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "src_components_layout_bottom_navigation_bottomnavigation",
-      "community": 11,
-      "community_name": "learning-store.tsx",
+      "community": 8,
+      "community_name": "app/layout.tsx",
       "norm_label": "bottomnavigation()"
     },
     {
@@ -1803,8 +1803,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_layout_skip_link",
-      "community": 11,
-      "community_name": "learning-store.tsx",
+      "community": 8,
+      "community_name": "app/layout.tsx",
       "norm_label": "skip-link.tsx"
     },
     {
@@ -1814,8 +1814,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_layout_skip_link_skiplink",
-      "community": 11,
-      "community_name": "learning-store.tsx",
+      "community": 8,
+      "community_name": "app/layout.tsx",
       "norm_label": "skiplink()"
     },
     {
@@ -2193,50 +2193,6 @@
       "norm_label": "letterwordcard()"
     },
     {
-      "label": "children-management.tsx",
-      "file_type": "code",
-      "source_file": "src/components/parent/children-management.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_components_parent_children_management",
-      "community": 21,
-      "community_name": "actions.ts",
-      "norm_label": "children-management.tsx"
-    },
-    {
-      "label": "ChildProfile",
-      "file_type": "code",
-      "source_file": "src/components/parent/children-management.tsx",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "src_components_parent_children_management_childprofile",
-      "community": 21,
-      "community_name": "actions.ts",
-      "norm_label": "childprofile"
-    },
-    {
-      "label": "ProfileForm()",
-      "file_type": "code",
-      "source_file": "src/components/parent/children-management.tsx",
-      "source_location": "L19",
-      "_origin": "ast",
-      "id": "src_components_parent_children_management_profileform",
-      "community": 21,
-      "community_name": "actions.ts",
-      "norm_label": "profileform()"
-    },
-    {
-      "label": "ChildrenManagement()",
-      "file_type": "code",
-      "source_file": "src/components/parent/children-management.tsx",
-      "source_location": "L101",
-      "_origin": "ast",
-      "id": "src_components_parent_children_management_childrenmanagement",
-      "community": 21,
-      "community_name": "actions.ts",
-      "norm_label": "childrenmanagement()"
-    },
-    {
       "label": "profile-page-content.tsx",
       "file_type": "code",
       "source_file": "src/components/profile/profile-page-content.tsx",
@@ -2452,8 +2408,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_providers_accessibility_settings_effect",
-      "community": 0,
-      "community_name": "cn",
+      "community": 11,
+      "community_name": "learning-store.tsx",
       "norm_label": "accessibility-settings-effect.tsx"
     },
     {
@@ -2463,8 +2419,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_components_providers_accessibility_settings_effect_textsizeclasses",
-      "community": 0,
-      "community_name": "cn",
+      "community": 11,
+      "community_name": "learning-store.tsx",
       "norm_label": "textsizeclasses"
     },
     {
@@ -2474,8 +2430,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_components_providers_accessibility_settings_effect_accessibilitysettingseffect",
-      "community": 0,
-      "community_name": "cn",
+      "community": 11,
+      "community_name": "learning-store.tsx",
       "norm_label": "accessibilitysettingseffect()"
     },
     {
@@ -2650,8 +2606,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_reading_reading_question_card",
-      "community": 6,
-      "community_name": "reading-practice.tsx",
+      "community": 0,
+      "community_name": "cn",
       "norm_label": "reading-question-card.tsx"
     },
     {
@@ -2661,8 +2617,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_components_reading_reading_question_card_readingquestioncardprops",
-      "community": 6,
-      "community_name": "reading-practice.tsx",
+      "community": 0,
+      "community_name": "cn",
       "norm_label": "readingquestioncardprops"
     },
     {
@@ -2672,8 +2628,8 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_components_reading_reading_question_card_readingquestioncard",
-      "community": 6,
-      "community_name": "reading-practice.tsx",
+      "community": 0,
+      "community_name": "cn",
       "norm_label": "readingquestioncard()"
     },
     {
@@ -2991,8 +2947,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_config_site",
-      "community": 11,
-      "community_name": "learning-store.tsx",
+      "community": 8,
+      "community_name": "app/layout.tsx",
       "norm_label": "site.ts"
     },
     {
@@ -3002,8 +2958,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_config_site_siteconfig",
-      "community": 11,
-      "community_name": "learning-store.tsx",
+      "community": 8,
+      "community_name": "app/layout.tsx",
       "norm_label": "siteconfig"
     },
     {
@@ -3351,11 +3307,11 @@
       "label": "useLearningStore()",
       "file_type": "code",
       "source_file": "src/lib/store/learning-store.tsx",
-      "source_location": "L312",
+      "source_location": "L303",
       "_origin": "ast",
       "id": "src_lib_store_learning_store_uselearningstore",
-      "community": 0,
-      "community_name": "cn",
+      "community": 11,
+      "community_name": "learning-store.tsx",
       "norm_label": "uselearningstore()"
     },
     {
@@ -3366,7 +3322,7 @@
       "_origin": "ast",
       "id": "src_lib_supabase_actions",
       "community": 21,
-      "community_name": "actions.ts",
+      "community_name": "createClient",
       "norm_label": "actions.ts"
     },
     {
@@ -3377,7 +3333,7 @@
       "_origin": "ast",
       "id": "src_lib_supabase_actions_loginwithgoogle",
       "community": 21,
-      "community_name": "actions.ts",
+      "community_name": "createClient",
       "norm_label": "loginwithgoogle()"
     },
     {
@@ -3388,7 +3344,7 @@
       "_origin": "ast",
       "id": "src_lib_supabase_actions_loginwithemail",
       "community": 21,
-      "community_name": "actions.ts",
+      "community_name": "createClient",
       "norm_label": "loginwithemail()"
     },
     {
@@ -3399,7 +3355,7 @@
       "_origin": "ast",
       "id": "src_lib_supabase_actions_signupwithemail",
       "community": 21,
-      "community_name": "actions.ts",
+      "community_name": "createClient",
       "norm_label": "signupwithemail()"
     },
     {
@@ -3410,52 +3366,8 @@
       "_origin": "ast",
       "id": "src_lib_supabase_actions_signout",
       "community": 21,
-      "community_name": "actions.ts",
+      "community_name": "createClient",
       "norm_label": "signout()"
-    },
-    {
-      "label": "setActiveChild()",
-      "file_type": "code",
-      "source_file": "src/lib/supabase/actions.ts",
-      "source_location": "L79",
-      "_origin": "ast",
-      "id": "src_lib_supabase_actions_setactivechild",
-      "community": 21,
-      "community_name": "actions.ts",
-      "norm_label": "setactivechild()"
-    },
-    {
-      "label": "createChildProfile()",
-      "file_type": "code",
-      "source_file": "src/lib/supabase/actions.ts",
-      "source_location": "L89",
-      "_origin": "ast",
-      "id": "src_lib_supabase_actions_createchildprofile",
-      "community": 21,
-      "community_name": "actions.ts",
-      "norm_label": "createchildprofile()"
-    },
-    {
-      "label": "updateChildProfile()",
-      "file_type": "code",
-      "source_file": "src/lib/supabase/actions.ts",
-      "source_location": "L117",
-      "_origin": "ast",
-      "id": "src_lib_supabase_actions_updatechildprofile",
-      "community": 21,
-      "community_name": "actions.ts",
-      "norm_label": "updatechildprofile()"
-    },
-    {
-      "label": "deleteChildProfile()",
-      "file_type": "code",
-      "source_file": "src/lib/supabase/actions.ts",
-      "source_location": "L148",
-      "_origin": "ast",
-      "id": "src_lib_supabase_actions_deletechildprofile",
-      "community": 21,
-      "community_name": "actions.ts",
-      "norm_label": "deletechildprofile()"
     },
     {
       "label": "client.ts",
@@ -3641,7 +3553,7 @@
       "_origin": "ast",
       "id": "src_lib_supabase_server",
       "community": 21,
-      "community_name": "actions.ts",
+      "community_name": "createClient",
       "norm_label": "server.ts"
     },
     {
@@ -3652,7 +3564,7 @@
       "_origin": "ast",
       "id": "src_lib_supabase_server_createclient",
       "community": 21,
-      "community_name": "actions.ts",
+      "community_name": "createClient",
       "norm_label": "createclient()"
     },
     {
@@ -6974,7 +6886,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L19",
+      "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_layout",
@@ -6985,7 +6897,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L12",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_layout",
@@ -6996,7 +6908,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L47",
+      "source_location": "L46",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_layout",
@@ -7007,7 +6919,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L39",
+      "source_location": "L38",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_layout",
@@ -7019,7 +6931,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L7",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_layout",
@@ -7031,7 +6943,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L7",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_layout",
@@ -7043,7 +6955,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L8",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_layout",
@@ -7055,7 +6967,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L8",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_layout",
@@ -7067,7 +6979,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L9",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_layout",
@@ -7079,7 +6991,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L9",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_layout",
@@ -7091,7 +7003,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L10",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_layout",
@@ -7103,7 +7015,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L10",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_layout",
@@ -7116,7 +7028,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/layout.tsx",
-      "source_location": "L57",
+      "source_location": "L54",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_layout_rootlayout",
@@ -7343,7 +7255,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/parent/page.tsx",
-      "source_location": "L11",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_parent_page",
@@ -7354,7 +7266,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/parent/page.tsx",
-      "source_location": "L16",
+      "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_parent_page",
@@ -7366,31 +7278,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/parent/page.tsx",
-      "source_location": "L9",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app_parent_page",
-      "target": "src_components_parent_children_management",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/parent/page.tsx",
-      "source_location": "L9",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app_parent_page",
-      "target": "src_components_parent_children_management_childrenmanagement",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/parent/page.tsx",
-      "source_location": "L8",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_parent_page",
@@ -7402,7 +7290,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/parent/page.tsx",
-      "source_location": "L8",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_parent_page",
@@ -7414,7 +7302,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/parent/page.tsx",
-      "source_location": "L7",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_parent_page",
@@ -7426,7 +7314,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/parent/page.tsx",
-      "source_location": "L7",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_parent_page",
@@ -7439,7 +7327,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/parent/page.tsx",
-      "source_location": "L17",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_parent_page_parentdashboardpage",
@@ -9160,99 +9048,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/parent/children-management.tsx",
-      "source_location": "L12",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_parent_children_management",
-      "target": "src_components_parent_children_management_childprofile",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/parent/children-management.tsx",
-      "source_location": "L101",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_parent_children_management",
-      "target": "src_components_parent_children_management_childrenmanagement",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/parent/children-management.tsx",
-      "source_location": "L19",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_parent_children_management",
-      "target": "src_components_parent_children_management_profileform",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/parent/children-management.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_parent_children_management",
-      "target": "src_lib_supabase_actions",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/parent/children-management.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_parent_children_management",
-      "target": "src_lib_supabase_actions_createchildprofile",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/parent/children-management.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_parent_children_management",
-      "target": "src_lib_supabase_actions_deletechildprofile",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/parent/children-management.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_parent_children_management",
-      "target": "src_lib_supabase_actions_setactivechild",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/parent/children-management.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_parent_children_management",
-      "target": "src_lib_supabase_actions_updatechildprofile",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "src/components/profile/profile-page-content.tsx",
       "source_location": "L455",
       "weight": 1.0,
@@ -10915,7 +10710,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/lib/store/learning-store.tsx",
-      "source_location": "L312",
+      "source_location": "L303",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_lib_store_learning_store",
@@ -10987,7 +10782,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/lib/store/learning-store.tsx",
-      "source_location": "L177",
+      "source_location": "L168",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_lib_store_learning_store_learningstoreprovider",
@@ -10999,7 +10794,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/lib/store/learning-store.tsx",
-      "source_location": "L209",
+      "source_location": "L200",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_lib_store_learning_store_learningstoreprovider",
@@ -11011,33 +10806,11 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/lib/store/learning-store.tsx",
-      "source_location": "L232",
+      "source_location": "L223",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_lib_store_learning_store_learningstoreprovider",
       "target": "src_lib_store_learning_store_adduniqueitem",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/supabase/actions.ts",
-      "source_location": "L89",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_lib_supabase_actions",
-      "target": "src_lib_supabase_actions_createchildprofile",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/supabase/actions.ts",
-      "source_location": "L148",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_lib_supabase_actions",
-      "target": "src_lib_supabase_actions_deletechildprofile",
       "confidence_score": 1.0
     },
     {
@@ -11066,17 +10839,6 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/lib/supabase/actions.ts",
-      "source_location": "L79",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_lib_supabase_actions",
-      "target": "src_lib_supabase_actions_setactivechild",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/supabase/actions.ts",
       "source_location": "L72",
       "weight": 1.0,
       "_origin": "ast",
@@ -11093,17 +10855,6 @@
       "_origin": "ast",
       "source": "src_lib_supabase_actions",
       "target": "src_lib_supabase_actions_signupwithemail",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/supabase/actions.ts",
-      "source_location": "L117",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_lib_supabase_actions",
-      "target": "src_lib_supabase_actions_updatechildprofile",
       "confidence_score": 1.0
     },
     {
@@ -11176,42 +10927,6 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_lib_supabase_actions_signout",
-      "target": "src_lib_supabase_server_createclient"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/lib/supabase/actions.ts",
-      "source_location": "L90",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_lib_supabase_actions_createchildprofile",
-      "target": "src_lib_supabase_server_createclient"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/lib/supabase/actions.ts",
-      "source_location": "L118",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_lib_supabase_actions_updatechildprofile",
-      "target": "src_lib_supabase_server_createclient"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/lib/supabase/actions.ts",
-      "source_location": "L149",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_lib_supabase_actions_deletechildprofile",
       "target": "src_lib_supabase_server_createclient"
     },
     {
@@ -13693,5 +13408,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "4b839a4c54486f974877fb774423e1df923ed36b"
+  "built_at_commit": "e757118b2d40d2f666f5ae1ac9e9901316732451"
 }
