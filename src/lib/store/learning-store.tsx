@@ -36,12 +36,19 @@ export type LearningState = {
 type LearningStoreValue = {
   state: LearningState;
   isHydrated: boolean;
+  activeChildId: string | null;
   setName: (name: string) => void;
   addPoints: (amount: number) => void;
   completeLetter: (letter: string) => void;
   completeReadingExercise: (exerciseId: string) => void;
   updateSettings: (settings: Partial<LearningSettings>) => void;
   resetProgress: () => void;
+  mergeFromDB: (dbState: {
+    completedLetters: string[];
+    completedReadingIds: string[];
+    points: number;
+    name: string;
+  }) => void;
 };
 
 const defaultSettings: LearningSettings = {
@@ -279,26 +286,48 @@ export function LearningStoreProvider({
     }));
   }, []);
 
+  const mergeFromDB = useCallback(
+    (dbState: {
+      completedLetters: string[];
+      completedReadingIds: string[];
+      points: number;
+      name: string;
+    }) => {
+      setState((currentState) => ({
+        ...currentState,
+        completedLetters: dbState.completedLetters,
+        completedReadingIds: dbState.completedReadingIds,
+        points: dbState.points,
+        name: dbState.name || currentState.name,
+      }));
+    },
+    []
+  );
+
   const value = useMemo<LearningStoreValue>(
     () => ({
       state,
       isHydrated,
+      activeChildId: activeChildId ?? null,
       setName,
       addPoints,
       completeLetter,
       completeReadingExercise,
       updateSettings,
       resetProgress,
+      mergeFromDB,
     }),
     [
       state,
       isHydrated,
+      activeChildId,
       setName,
       addPoints,
       completeLetter,
       completeReadingExercise,
       updateSettings,
       resetProgress,
+      mergeFromDB,
     ],
   );
 

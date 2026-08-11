@@ -1,16 +1,16 @@
-# Graph Report - lentera-baca  (2026-08-12)
+# Graph Report - lentera-baca  (2026-07-30)
 
 ## Corpus Check
-- 88 files · ~26,354 words
+- 85 files · ~24,763 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 562 nodes · 712 edges · 44 communities (34 shown, 10 thin omitted)
+- 550 nodes · 673 edges · 43 communities (33 shown, 10 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `6c5acacd`
+- Built from commit: `4b839a4c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -23,7 +23,6 @@
 - components.json
 - reading-practice.tsx
 - leaderboard-page-content.tsx
-- app/layout.tsx
 - home-dashboard.tsx
 - AI Agent Guidelines (Do's & Don'ts)
 - learning-store.tsx
@@ -33,7 +32,7 @@
 - next.config.ts
 - postcss.config.mjs
 - sw.js
-- createClient
+- actions.ts
 - MVP Accessibility & Usability QA
 - Lentera Baca
 - 📊 Database Schema — Lentera Baca V2
@@ -59,35 +58,35 @@
 ## God Nodes (most connected - your core abstractions)
 1. `cn()` - 29 edges
 2. `Lentera Baca` - 28 edges
-3. `createClient()` - 20 edges
-4. `useLearningStore()` - 17 edges
-5. `MVP Accessibility & Usability QA` - 17 edges
-6. `compilerOptions` - 16 edges
+3. `MVP Accessibility & Usability QA` - 17 edges
+4. `compilerOptions` - 16 edges
+5. `useLearningStore()` - 15 edges
+6. `createClient()` - 13 edges
 7. `8. Folder Structure` - 13 edges
-8. `useSyncProgress()` - 7 edges
-9. `include` - 7 edges
-10. `5. Main Features` - 7 edges
+8. `include` - 7 edges
+9. `5. Main Features` - 7 edges
+10. `📊 Database Schema — Lentera Baca V2` - 7 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `RootLayout()` --calls--> `cn()`  [EXTRACTED]
   src/app/layout.tsx → src/lib/utils.ts
-- `LearningStatePreview()` --calls--> `useLearningStore()`  [EXTRACTED]
-  src/components/dashboard/learning-state-preview.tsx → src/lib/store/learning-store.tsx
 - `GET()` --calls--> `createClient()`  [EXTRACTED]
   src/app/auth/callback/route.ts → src/lib/supabase/server.ts
 - `ParentDashboardPage()` --calls--> `createClient()`  [EXTRACTED]
   src/app/parent/page.tsx → src/lib/supabase/server.ts
 - `HomeDashboard()` --calls--> `useLearningStore()`  [EXTRACTED]
   src/components/dashboard/home-dashboard.tsx → src/lib/store/learning-store.tsx
+- `LearningStatePreview()` --calls--> `useLearningStore()`  [EXTRACTED]
+  src/components/dashboard/learning-state-preview.tsx → src/lib/store/learning-store.tsx
 
 ## Import Cycles
 - None detected.
 
-## Communities (44 total, 10 thin omitted)
+## Communities (43 total, 10 thin omitted)
 
 ### Community 0 - "cn"
 Cohesion: 0.05
-Nodes (38): LearningStatePreview(), textSizeLabels, textSizeOrder, PageContainer(), PageContainerProps, clampPercentage(), getInitials(), ModeButton() (+30 more)
+Nodes (39): LearningStatePreview(), textSizeLabels, textSizeOrder, PageContainer(), PageContainerProps, clampPercentage(), getInitials(), ModeButton() (+31 more)
 
 ### Community 1 - "compilerOptions"
 Cohesion: 0.07
@@ -102,24 +101,20 @@ Cohesion: 0.08
 Nodes (25): eslint, eslint-config-next, devDependencies, eslint, eslint-config-next, tailwindcss, @tailwindcss/postcss, @types/node (+17 more)
 
 ### Community 4 - "letter-lesson.tsx"
-Cohesion: 0.11
-Nodes (16): LetterActions(), LetterActionsProps, LetterBottomBar(), LetterBottomBarProps, getWrappedIndex(), LetterLesson(), LetterProgressHeader(), LetterProgressHeaderProps (+8 more)
+Cohesion: 0.12
+Nodes (14): LetterActions(), LetterActionsProps, LetterBottomBar(), LetterBottomBarProps, getWrappedIndex(), LetterLesson(), LetterProgressHeader(), LetterProgressHeaderProps (+6 more)
 
 ### Community 5 - "components.json"
 Cohesion: 0.09
 Nodes (21): aliases, components, hooks, lib, ui, utils, iconLibrary, menuAccent (+13 more)
 
 ### Community 6 - "reading-practice.tsx"
-Cohesion: 0.15
-Nodes (12): ReadingFooterActions(), ReadingFooterActionsProps, FeedbackState, getLevel(), getWrappedIndex(), ReadingPractice(), ReadingProgressHeader(), ReadingProgressHeaderProps (+4 more)
+Cohesion: 0.11
+Nodes (16): ReadingFooterActions(), ReadingFooterActionsProps, FeedbackState, getLevel(), getWrappedIndex(), ReadingPractice(), ReadingProgressHeader(), ReadingProgressHeaderProps (+8 more)
 
 ### Community 7 - "leaderboard-page-content.tsx"
 Cohesion: 0.13
 Nodes (9): getAvatarClassName(), getCurrentUserRankList(), getInitial(), LeaderboardPageContent(), PodiumAvatar(), RankedPerson, RankingRow(), leaderboardPeople (+1 more)
-
-### Community 8 - "app/layout.tsx"
-Cohesion: 0.15
-Nodes (12): metadata, readableFont, RootLayout(), viewport, AppShell(), AppShellProps, BottomNavigation(), hiddenRoutes (+4 more)
 
 ### Community 9 - "home-dashboard.tsx"
 Cohesion: 0.15
@@ -130,16 +125,16 @@ Cohesion: 0.06
 Nodes (29): 1. Aturan Pencegahan Halusinasi (Anti-Hallucination), 2. Prinsip Produk & Edukasi Anak (Product Principles), 3. Prosedur Penanganan Error (Error Handling), 4. Do's & Don'ts Ringkasan, 5. Checklist Sebelum Menyelesaikan Tugas, AI Agent Guidelines (Do's & Don'ts), ✅ Do's, ❌ Don'ts (+21 more)
 
 ### Community 11 - "learning-store.tsx"
-Cohesion: 0.13
-Nodes (22): AccessibilitySettingsEffect(), textSizeClasses, AppProviders(), ServiceWorkerRegister(), SyncProgressEffect(), addUniqueItem(), defaultSettings, defaultState (+14 more)
+Cohesion: 0.07
+Nodes (30): metadata, readableFont, RootLayout(), viewport, AppShell(), AppShellProps, BottomNavigation(), hiddenRoutes (+22 more)
 
 ### Community 12 - "CLAUDE.md"
 Cohesion: 0.06
 Nodes (31): 10. Language and Copywriting, 11. Routing Goals, 12. Target Folder Structure, 13. Component Guidelines, 14. Styling Guidelines, 15. Client vs Server Components, 16. State Management Plan, 17. Audio Guidelines (+23 more)
 
-### Community 21 - "createClient"
-Cohesion: 0.09
-Nodes (26): GET(), metadata, metadata, ParentDashboardPage(), metadata, LoginPageContent(), SignupPageContent(), ChildProfile (+18 more)
+### Community 21 - "actions.ts"
+Cohesion: 0.11
+Nodes (18): GET(), metadata, metadata, ParentDashboardPage(), metadata, LoginPageContent(), SignupPageContent(), ChildProfile (+10 more)
 
 ### Community 23 - "MVP Accessibility & Usability QA"
 Cohesion: 0.08
@@ -206,24 +201,24 @@ Cohesion: 0.47
 Nodes (4): IMPORTANT: Do NOT add any logic between createServerClient and, updateSession(), config, middleware()
 
 ## Knowledge Gaps
-- **285 isolated node(s):** `$schema`, `style`, `rsc`, `tsx`, `config` (+280 more)
+- **286 isolated node(s):** `$schema`, `style`, `rsc`, `tsx`, `config` (+281 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `useLearningStore()` connect `learning-store.tsx` to `cn`, `letter-lesson.tsx`, `reading-practice.tsx`, `leaderboard-page-content.tsx`, `home-dashboard.tsx`?**
-  _High betweenness centrality (0.029) - this node is a cross-community bridge._
-- **Why does `cn()` connect `cn` to `app/layout.tsx`, `leaderboard-page-content.tsx`?**
-  _High betweenness centrality (0.025) - this node is a cross-community bridge._
+- **Why does `useLearningStore()` connect `cn` to `letter-lesson.tsx`, `reading-practice.tsx`, `leaderboard-page-content.tsx`, `home-dashboard.tsx`, `learning-store.tsx`?**
+  _High betweenness centrality (0.027) - this node is a cross-community bridge._
+- **Why does `cn()` connect `cn` to `learning-store.tsx`, `reading-practice.tsx`, `leaderboard-page-content.tsx`?**
+  _High betweenness centrality (0.024) - this node is a cross-community bridge._
+- **Why does `Lentera Baca` connect `Lentera Baca` to `13. Installation & Environment Setup`, `14. Running the Project`, `20. Future Roadmap`, `7. System Architecture`, `12. PWA Support`, `3. Target Users`, `8. Folder Structure`, `5. Main Features`, `11. Accessibility Principles`, `18. Quality Assurance`, `10. State Management`?**
+  _High betweenness centrality (0.016) - this node is a cross-community bridge._
 - **What connects `$schema`, `style`, `rsc` to the rest of the system?**
-  _285 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _286 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `cn` be split into smaller, more focused modules?**
-  _Cohesion score 0.05376972530683811 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05423728813559322 - nodes in this community are weakly interconnected._
 - **Should `compilerOptions` be split into smaller, more focused modules?**
   _Cohesion score 0.06896551724137931 - nodes in this community are weakly interconnected._
 - **Should `dependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected._
-- **Should `devDependencies` be split into smaller, more focused modules?**
-  _Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected._
