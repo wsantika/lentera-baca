@@ -3,8 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { LogOut, Settings, Users } from "lucide-react";
 
+import { cookies } from "next/headers";
 import { createClient } from "@/lib/supabase/server";
 import { signOut } from "@/lib/supabase/actions";
+import { ChildrenManagement } from "@/components/parent/children-management";
 
 export const metadata = {
   title: "Dashboard Orang Tua",
@@ -32,9 +34,12 @@ export default async function ParentDashboardPage() {
   // Fetch child profiles
   const { data: children } = await supabase
     .from("child_profiles")
-    .select("*")
+    .select("id, display_name, avatar_emoji, age")
     .eq("parent_id", user.id)
     .order("created_at", { ascending: true });
+
+  const cookieStore = await cookies();
+  const activeChildId = cookieStore.get("lentera_active_child")?.value || null;
 
   const displayName =
     profile?.full_name ||
@@ -133,44 +138,10 @@ export default async function ParentDashboardPage() {
         </div>
 
         {/* Children List */}
-        <div className="rounded-2xl border border-stone-200/60 bg-white p-5 shadow-sm">
-          <h2 className="mb-4 text-sm font-semibold text-stone-700">
-            Profil Anak
-          </h2>
-
-          {children && children.length > 0 ? (
-            <ul className="space-y-3">
-              {children.map((child) => (
-                <li
-                  key={child.id}
-                  className="flex items-center gap-3 rounded-xl border border-stone-100 bg-stone-50/50 p-3"
-                >
-                  <span className="text-2xl" role="img" aria-label="Avatar">
-                    {child.avatar_emoji}
-                  </span>
-                  <div className="flex-1">
-                    <p className="text-sm font-medium text-stone-800">
-                      {child.display_name}
-                    </p>
-                    <p className="text-xs text-stone-400">
-                      {child.age ? `${child.age} tahun` : "Usia belum diisi"}
-                    </p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <div className="rounded-xl bg-amber-50 px-4 py-6 text-center">
-              <p className="text-2xl">👶</p>
-              <p className="mt-2 text-sm font-medium text-stone-600">
-                Belum ada profil anak
-              </p>
-              <p className="mt-1 text-xs text-stone-400">
-                Fitur manajemen profil anak akan segera hadir!
-              </p>
-            </div>
-          )}
-        </div>
+        <ChildrenManagement 
+          childrenProfiles={children || []} 
+          activeChildId={activeChildId} 
+        />
 
         {/* Back to Home */}
         <div className="mt-8 text-center">

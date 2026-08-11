@@ -10,7 +10,7 @@ import {
   type ReactNode,
 } from "react";
 
-const STORAGE_KEY = "lentera-baca-learning-state-v1";
+const BASE_STORAGE_KEY = "lentera-baca-learning-state-v1";
 
 export type TextSize = "normal" | "large" | "extra-large";
 
@@ -149,7 +149,16 @@ function addUniqueItem(items: string[], item: string) {
   return [...items, item];
 }
 
-export function LearningStoreProvider({ children }: { children: ReactNode }) {
+export function LearningStoreProvider({ 
+  children,
+  activeChildId,
+}: { 
+  children: ReactNode;
+  activeChildId?: string | null;
+}) {
+  const storageKey = activeChildId 
+    ? `${BASE_STORAGE_KEY}-${activeChildId}` 
+    : BASE_STORAGE_KEY;
   const [state, setState] = useState<LearningState>(defaultState);
   const [isHydrated, setIsHydrated] = useState(false);
 
@@ -162,7 +171,7 @@ export function LearningStoreProvider({ children }: { children: ReactNode }) {
       }
 
       try {
-        const storedValue = window.localStorage.getItem(STORAGE_KEY);
+        const storedValue = window.localStorage.getItem(storageKey);
 
         setState(
           storedValue ? normalizeState(JSON.parse(storedValue)) : defaultState,
@@ -178,15 +187,15 @@ export function LearningStoreProvider({ children }: { children: ReactNode }) {
       isCancelled = true;
       window.clearTimeout(timeoutId);
     };
-  }, []);
+  }, [storageKey]);
 
   useEffect(() => {
     if (!isHydrated) {
       return;
     }
 
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-  }, [isHydrated, state]);
+    window.localStorage.setItem(storageKey, JSON.stringify(state));
+  }, [isHydrated, state, storageKey]);
 
   const setName = useCallback((name: string) => {
     setState((currentState) => ({

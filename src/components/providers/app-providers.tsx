@@ -6,9 +6,15 @@ import { AccessibilitySettingsEffect } from "@/components/providers/accessibilit
 import { ServiceWorkerRegister } from "@/components/providers/service-worker-register";
 import { LearningStoreProvider } from "@/lib/store/learning-store";
 
-export function AppProviders({ children }: { children: ReactNode }) {
+export function AppProviders({ 
+  children,
+  activeChildId,
+}: { 
+  children: ReactNode;
+  activeChildId?: string | null;
+}) {
   return (
-    <LearningStoreProvider>
+    <LearningStoreProvider activeChildId={activeChildId}>
       <AccessibilitySettingsEffect />
       <ServiceWorkerRegister />
       {children}
