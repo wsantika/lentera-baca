@@ -8,8 +8,9 @@ import { LetterProgressHeader } from "@/components/letters/letter-progress-heade
 import { LetterStage } from "@/components/letters/letter-stage";
 import { LetterWordCard } from "@/components/letters/letter-word-card";
 import { letters } from "@/lib/data/letters";
-import { useSpeech } from "@/lib/hooks/use-speech";
+import { useAudioPlayer } from "@/lib/hooks/use-audio-player";
 import { useLearningStore } from "@/lib/store/learning-store";
+import { getLetterAudioPath } from "@/config/audio";
 
 function getWrappedIndex(index: number, total: number) {
   if (index < 0) {
@@ -25,7 +26,7 @@ function getWrappedIndex(index: number, total: number) {
 
 export function LetterLesson() {
   const { state, isHydrated, completeLetter } = useLearningStore();
-  const { isSpeaking, speak } = useSpeech();
+  const { isSpeaking, speak } = useAudioPlayer();
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const firstIncompleteIndex = useMemo(() => {
@@ -57,7 +58,10 @@ export function LetterLesson() {
   const handleSpeak = useCallback(() => {
     setSelectedIndex(currentIndex);
     completeLetter(currentLetter.letter);
-    speak(currentLetter.speechText);
+    speak(
+      getLetterAudioPath(currentLetter.letter),
+      currentLetter.speechText
+    );
   }, [
     completeLetter,
     currentIndex,
