@@ -1,0 +1,36 @@
+## Summary
+
+Mengimplementasikan sinkronisasi progres belajar dari `localStorage` ke backend database Supabase dengan pendekatan local-first (offline-friendly). Setiap kali anak menyelesaikan huruf atau latihan membaca, data otomatis tersimpan ke database tanpa mengganggu pengalaman belajar.
+
+## Changes
+
+### Sync Infrastructure
+- **`src/lib/supabase/sync.ts`**: Server Actions untuk CRUD sinkronisasi progress. Mendukung `fetchChildProgress` (ambil data dari DB), `syncLetterComplete` (upsert huruf + log poin), `syncReadingComplete` (upsert reading + log poin), `syncStreakBonus` (log bonus streak), `syncAccessibilitySettings` (update settings JSONB), dan `bulkSyncProgress` (migrasi massal data lokal → DB).
+
+### Sync Hook & Effect
+- **`src/lib/hooks/use-sync-progress.ts`**: Client hook untuk bidirectional sync. Pada mount: fetch DB → merge dengan lokal (strategi union). Jika ada data lokal yang belum ada di DB, otomatis di-push via bulk sync. Expose per-action sync functions yang gagal secara silent saat offline.
+- **`src/components/providers/sync-progress-effect.tsx`**: Invisible component yang mendeteksi delta state (huruf/reading/settings baru) dan memanggil sync function secara otomatis.
+
+### State Management
+- **`src/lib/store/learning-store.tsx`**: Tambah `mergeFromDB` callback untuk menggabungkan data dari database ke state React. Expose `activeChildId` melalui context.
+- **`src/components/providers/app-providers.tsx`**: Wire up `<SyncProgressEffect />` di dalam provider tree.
+
+### CI/CD
+- **`.github/workflows/ci.yml`**: GitHub Actions workflow untuk otomasi lint & build verification pada setiap push/PR ke branch `main` atau `dev`.
+
+## Verification
+
+- ✅ `npm run lint` — 0 errors, 4 warnings (pre-existing)
+- ✅ `npm run build` — Build sukses (14 routes)
+- ✅ `graphify update .` — Knowledge graph updated (562 nodes, 712 edges)
+
+## New Files
+
+| File | Description |
+|---|---|
+| `src/lib/supabase/sync.ts` | Server Actions untuk sync progress ke Supabase |
+| `src/lib/hooks/use-sync-progress.ts` | Client hook bidirectional sync |
+| `src/components/providers/sync-progress-effect.tsx` | Auto-sync effect component |
+| `.github/workflows/ci.yml` | GitHub Actions CI workflow |
+
+Closes #27

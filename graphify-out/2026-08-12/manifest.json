@@ -170,8 +170,8 @@
     "semantic_hash": "1fc91fce4202bdbbb0fb7f380f63f21e"
   },
   "src/components/providers/app-providers.tsx": {
-    "mtime": 1786466542.6065962,
-    "ast_hash": "7318b7fd36a1a80c10302dc6a4fa6b9a",
+    "mtime": 1786465447.0740607,
+    "ast_hash": "9e0f2418c15b062eae9b1244f6a7dfcd",
     "semantic_hash": ""
   },
   "src/components/providers/service-worker-register.tsx": {
@@ -265,8 +265,8 @@
     "semantic_hash": "a1b302fe3d091af53f1052e1ae54fcae"
   },
   "src/lib/store/learning-store.tsx": {
-    "mtime": 1786466516.0614192,
-    "ast_hash": "de4849ea1ed73da7704a52b47dbc42b0",
+    "mtime": 1786465447.0756755,
+    "ast_hash": "22472db281764530ba04acf0c7083ada",
     "semantic_hash": ""
   },
   "src/lib/supabase/client.ts": {
@@ -462,21 +462,6 @@
   ".github/workflows/ci.yml": {
     "mtime": 1786465741.517824,
     "ast_hash": "e5f3586149e5743a0f74245906305f84",
-    "semantic_hash": ""
-  },
-  "src/components/providers/sync-progress-effect.tsx": {
-    "mtime": 1786466729.1662798,
-    "ast_hash": "4ddc71898335467895bf0108625ca0c5",
-    "semantic_hash": ""
-  },
-  "src/lib/hooks/use-sync-progress.ts": {
-    "mtime": 1786466713.9556515,
-    "ast_hash": "396db122a1151c5b5f7d0f4865d5b4c2",
-    "semantic_hash": ""
-  },
-  "src/lib/supabase/sync.ts": {
-    "mtime": 1786466462.2253797,
-    "ast_hash": "5c713286635dc6c4d13422cf17350fd1",
     "semantic_hash": ""
   }
 }
