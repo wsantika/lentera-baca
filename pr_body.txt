@@ -1,36 +1,42 @@
 ## Summary
 
-Mengimplementasikan sinkronisasi progres belajar dari `localStorage` ke backend database Supabase dengan pendekatan local-first (offline-friendly). Setiap kali anak menyelesaikan huruf atau latihan membaca, data otomatis tersimpan ke database tanpa mengganggu pengalaman belajar.
+Mengganti ketergantungan pada Web Speech API dengan arsitektur audio player baru yang memprioritaskan file audio statis terkurasi Bahasa Indonesia. Jika file audio belum tersedia, otomatis fallback ke Speech API (`id-ID`). Menyiapkan struktur folder aset audio dan panduan rekaman.
 
 ## Changes
 
-### Sync Infrastructure
-- **`src/lib/supabase/sync.ts`**: Server Actions untuk CRUD sinkronisasi progress. Mendukung `fetchChildProgress` (ambil data dari DB), `syncLetterComplete` (upsert huruf + log poin), `syncReadingComplete` (upsert reading + log poin), `syncStreakBonus` (log bonus streak), `syncAccessibilitySettings` (update settings JSONB), dan `bulkSyncProgress` (migrasi massal data lokal → DB).
+### Audio Infrastructure
+- **`src/config/audio.ts`**: Konfigurasi pemetaan path audio. Konvensi penamaan: `/audio/letters/{huruf}.mp3`, `/audio/reading/{exercise_id}.mp3`, `/audio/sfx/{nama}.mp3`.
+- **`src/lib/hooks/use-audio-player.ts`**: Custom hook pengganti `useSpeech`. Mencoba load file `.mp3` terlebih dahulu via `HTMLAudioElement`, jika gagal (404/error) otomatis fallback ke `speechSynthesis`. Expose `speak(audioPath, fallbackText)`, `speakText(text)`, `cancel()`, dan `isSpeaking`.
 
-### Sync Hook & Effect
-- **`src/lib/hooks/use-sync-progress.ts`**: Client hook untuk bidirectional sync. Pada mount: fetch DB → merge dengan lokal (strategi union). Jika ada data lokal yang belum ada di DB, otomatis di-push via bulk sync. Expose per-action sync functions yang gagal secara silent saat offline.
-- **`src/components/providers/sync-progress-effect.tsx`**: Invisible component yang mendeteksi delta state (huruf/reading/settings baru) dan memanggil sync function secara otomatis.
+### Consumer Updates
+- **`src/components/letters/letter-lesson.tsx`**: Migrasi dari `useSpeech` → `useAudioPlayer`. `handleSpeak` sekarang memanggil `speak(getLetterAudioPath(letter), speechText)`.
+- **`src/components/reading/reading-practice.tsx`**: Migrasi dari `useSpeech` → `useAudioPlayer`. `handleListen` sekarang memanggil `speak(getReadingAudioPath(id), speechText)`.
 
-### State Management
-- **`src/lib/store/learning-store.tsx`**: Tambah `mergeFromDB` callback untuk menggabungkan data dari database ke state React. Expose `activeChildId` melalui context.
-- **`src/components/providers/app-providers.tsx`**: Wire up `<SyncProgressEffect />` di dalam provider tree.
+### Audio Asset Pipeline
+- **`public/audio/`**: Struktur folder siap pakai untuk aset audio terkurasi.
+  - `letters/` — File pengucapan huruf A-Z (`.mp3`)
+  - `reading/` — File audio latihan membaca
+  - `sfx/` — Sound effects (correct, incorrect, complete)
+- **`public/audio/README.md`**: Panduan rekaman audio (format, bitrate, panduan konten, penamaan file).
 
-### CI/CD
-- **`.github/workflows/ci.yml`**: GitHub Actions workflow untuk otomasi lint & build verification pada setiap push/PR ke branch `main` atau `dev`.
+### Backward Compatibility
+- **`src/lib/hooks/use-speech.ts`**: File lama tetap dipertahankan (tidak dihapus) untuk kompatibilitas jika ada komponen lain yang masih menggunakannya.
 
 ## Verification
 
 - ✅ `npm run lint` — 0 errors, 4 warnings (pre-existing)
 - ✅ `npm run build` — Build sukses (14 routes)
-- ✅ `graphify update .` — Knowledge graph updated (562 nodes, 712 edges)
+- ✅ `graphify update .` — Knowledge graph updated
 
 ## New Files
 
 | File | Description |
 |---|---|
-| `src/lib/supabase/sync.ts` | Server Actions untuk sync progress ke Supabase |
-| `src/lib/hooks/use-sync-progress.ts` | Client hook bidirectional sync |
-| `src/components/providers/sync-progress-effect.tsx` | Auto-sync effect component |
-| `.github/workflows/ci.yml` | GitHub Actions CI workflow |
+| `src/config/audio.ts` | Audio path mapping configuration |
+| `src/lib/hooks/use-audio-player.ts` | Custom audio player hook with fallback |
+| `public/audio/README.md` | Audio recording guidelines |
+| `public/audio/letters/.gitkeep` | Placeholder for letter audio files |
+| `public/audio/reading/.gitkeep` | Placeholder for reading audio files |
+| `public/audio/sfx/.gitkeep` | Placeholder for SFX audio files |
 
-Closes #27
+Closes #28
