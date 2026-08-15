@@ -5,6 +5,7 @@ export type LetterItem = {
   syllables: string;
   emoji: string;
   speechText: string;
+  imagePath: string;
 };
 
 export const letters: LetterItem[] = [
@@ -15,6 +16,7 @@ export const letters: LetterItem[] = [
     syllables: "A - pe - l",
     emoji: "🍏",
     speechText: "A. Apel.",
+    imagePath: "/images/letters/A.jpg",
   },
   {
     id: "letter-b",
@@ -23,6 +25,7 @@ export const letters: LetterItem[] = [
     syllables: "B - be - bek",
     emoji: "🦆",
     speechText: "B. Bebek.",
+    imagePath: "/images/letters/B.jpg",
   },
   {
     id: "letter-c",
@@ -31,6 +34,7 @@ export const letters: LetterItem[] = [
     syllables: "C - ce - ri",
     emoji: "🍒",
     speechText: "C. Ceri.",
+    imagePath: "/images/letters/C.jpg",
   },
   {
     id: "letter-d",
@@ -39,6 +43,7 @@ export const letters: LetterItem[] = [
     syllables: "D - da - du",
     emoji: "🎲",
     speechText: "D. Dadu.",
+    imagePath: "/images/letters/D.jpg",
   },
   {
     id: "letter-e",
@@ -47,6 +52,7 @@ export const letters: LetterItem[] = [
     syllables: "E - e - lang",
     emoji: "🦅",
     speechText: "E. Elang.",
+    imagePath: "/images/letters/E.jpg",
   },
   {
     id: "letter-f",
@@ -55,6 +61,7 @@ export const letters: LetterItem[] = [
     syllables: "F - fo - to",
     emoji: "📷",
     speechText: "F. Foto.",
+    imagePath: "/images/letters/F.jpg",
   },
   {
     id: "letter-g",
@@ -63,6 +70,7 @@ export const letters: LetterItem[] = [
     syllables: "G - ga - jah",
     emoji: "🐘",
     speechText: "G. Gajah.",
+    imagePath: "/images/letters/G.jpg",
   },
   {
     id: "letter-h",
@@ -71,6 +79,7 @@ export const letters: LetterItem[] = [
     syllables: "H - hu - jan",
     emoji: "🌧️",
     speechText: "H. Hujan.",
+    imagePath: "/images/letters/H.jpg",
   },
   {
     id: "letter-i",
@@ -79,6 +88,7 @@ export const letters: LetterItem[] = [
     syllables: "I - i - kan",
     emoji: "🐟",
     speechText: "I. Ikan.",
+    imagePath: "/images/letters/I.jpg",
   },
   {
     id: "letter-j",
@@ -87,6 +97,7 @@ export const letters: LetterItem[] = [
     syllables: "J - je - ruk",
     emoji: "🍊",
     speechText: "J. Jeruk.",
+    imagePath: "/images/letters/J.jpg",
   },
   {
     id: "letter-k",
@@ -95,6 +106,7 @@ export const letters: LetterItem[] = [
     syllables: "K - ke - lin - ci",
     emoji: "🐇",
     speechText: "K. Kelinci.",
+    imagePath: "/images/letters/K.jpg",
   },
   {
     id: "letter-l",
@@ -103,6 +115,7 @@ export const letters: LetterItem[] = [
     syllables: "L - li - lin",
     emoji: "🕯️",
     speechText: "L. Lilin.",
+    imagePath: "/images/letters/L.jpg",
   },
   {
     id: "letter-m",
@@ -111,6 +124,7 @@ export const letters: LetterItem[] = [
     syllables: "M - mang - ga",
     emoji: "🥭",
     speechText: "M. Mangga.",
+    imagePath: "/images/letters/M.jpg",
   },
   {
     id: "letter-n",
@@ -119,6 +133,7 @@ export const letters: LetterItem[] = [
     syllables: "N - na - nas",
     emoji: "🍍",
     speechText: "N. Nanas.",
+    imagePath: "/images/letters/N.jpg",
   },
   {
     id: "letter-o",
@@ -127,6 +142,7 @@ export const letters: LetterItem[] = [
     syllables: "O - o - bor",
     emoji: "🔥",
     speechText: "O. Obor.",
+    imagePath: "/images/letters/O.jpg",
   },
   {
     id: "letter-p",
@@ -135,6 +151,7 @@ export const letters: LetterItem[] = [
     syllables: "P - pe - sa - wat",
     emoji: "✈️",
     speechText: "P. Pesawat.",
+    imagePath: "/images/letters/P.jpg",
   },
   {
     id: "letter-q",
@@ -143,6 +160,7 @@ export const letters: LetterItem[] = [
     syllables: "Q - qa - ri",
     emoji: "📖",
     speechText: "Q. Qari.",
+    imagePath: "/images/letters/Q.jpg",
   },
   {
     id: "letter-r",
@@ -151,6 +169,7 @@ export const letters: LetterItem[] = [
     syllables: "R - ro - ti",
     emoji: "🍞",
     speechText: "R. Roti.",
+    imagePath: "/images/letters/R.jpg",
   },
   {
     id: "letter-s",
@@ -159,6 +178,7 @@ export const letters: LetterItem[] = [
     syllables: "S - sa - pi",
     emoji: "🐄",
     speechText: "S. Sapi.",
+    imagePath: "/images/letters/S.jpg",
   },
   {
     id: "letter-t",
@@ -167,6 +187,7 @@ export const letters: LetterItem[] = [
     syllables: "T - to - pi",
     emoji: "🎩",
     speechText: "T. Topi.",
+    imagePath: "/images/letters/T.jpg",
   },
   {
     id: "letter-u",
@@ -175,6 +196,7 @@ export const letters: LetterItem[] = [
     syllables: "U - u - lar",
     emoji: "🐍",
     speechText: "U. Ular.",
+    imagePath: "/images/letters/U.jpg",
   },
   {
     id: "letter-v",
@@ -183,6 +205,7 @@ export const letters: LetterItem[] = [
     syllables: "V - vas",
     emoji: "🏺",
     speechText: "V. Vas.",
+    imagePath: "/images/letters/V.jpg",
   },
   {
     id: "letter-w",
@@ -191,6 +214,7 @@ export const letters: LetterItem[] = [
     syllables: "W - wor - tel",
     emoji: "🥕",
     speechText: "W. Wortel.",
+    imagePath: "/images/letters/W.jpg",
   },
   {
     id: "letter-x",
@@ -199,6 +223,7 @@ export const letters: LetterItem[] = [
     syllables: "X - xi - lo - fon",
     emoji: "🎼",
     speechText: "X. Xilofon.",
+    imagePath: "/images/letters/X.jpg",
   },
   {
     id: "letter-y",
@@ -207,6 +232,7 @@ export const letters: LetterItem[] = [
     syllables: "Y - yo - yo",
     emoji: "🪀",
     speechText: "Y. Yoyo.",
+    imagePath: "/images/letters/Y.jpg",
   },
   {
     id: "letter-z",
@@ -215,5 +241,6 @@ export const letters: LetterItem[] = [
     syllables: "Z - ze - bra",
     emoji: "🦓",
     speechText: "Z. Zebra.",
+    imagePath: "/images/letters/Z.jpg",
   },
 ];

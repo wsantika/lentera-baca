@@ -124,6 +124,7 @@ export function LetterLesson() {
           <LetterWordCard
             emoji={currentLetter.emoji}
             word={currentLetter.word}
+            imagePath={currentLetter.imagePath}
           />
 
           <LetterActions
