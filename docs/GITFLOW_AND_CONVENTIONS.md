@@ -53,6 +53,12 @@ Kita menggunakan standar [Conventional Commits](https://www.conventionalcommits.
 - `fix(ui): resolve overlapping text on small screens`
 - `docs(gitflow): update PR guidelines`
 
+**Aturan Tambahan: Commit Atomik (Per-Context)**
+- **Wajib melakukan commit per konteks atau per file jika perubahannya tidak berkaitan erat.**
+- Jangan menyatukan semua perubahan dalam satu commit besar ("semua-semuanya dijadikan satu").
+- Jika kamu memperbaiki bug UI dan di saat yang sama mengubah skema database, pisahkan menjadi minimal 2 commit yang berbeda.
+- Gunakan `git add <file>` spesifik, hindari `git add .` jika ada file dari konteks yang berbeda.
+
 ## 3. Format & Prosedur Pull Request (PR)
 
 Semua perubahan kode di luar lingkup pribadi harus melalui *Pull Request* (PR).
@@ -64,6 +70,20 @@ Semua perubahan kode di luar lingkup pribadi harus melalui *Pull Request* (PR).
    - Gunakan kata kunci GitHub untuk menghubungkan PR dengan *Issues*.
      - Gunakan **`Closes #N`** atau **`Fixes #N`** jika PR ini **menyelesaikan secara penuh** isu nomor N (otomatis menutup isu saat di-merge).
      - Gunakan **`Refs #N`** jika PR ini **terkait** dengan isu nomor N tetapi tidak menyelesaikannya sepenuhnya (tidak menutup isu otomatis).
+4. **Format Checklist Verifikasi**:
+   - Selalu sertakan checklist verifikasi di dalam *body* PR menggunakan sintaks Markdown checkbox `[ ]` (bukan emoji ✅).
+   - Contoh format *body* PR:
+     ```markdown
+     ## Summary
+     Deskripsi perubahan...
+
+     ## Verification
+     - [ ] `npm run lint` — 0 errors
+     - [ ] `npm run build` — Build sukses
+     - [ ] `graphify update .` — Knowledge graph updated
+
+     Closes #N
+     ```
 
 ## 4. Git Lifecycle (Siklus Kerja Pengembang)
 
