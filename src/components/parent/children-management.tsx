@@ -114,7 +114,7 @@ export function ChildrenManagement({
     try {
       await createChildProfile(formData);
       setIsAdding(false);
-    } catch (error) {
+    } catch {
       alert("Gagal menambahkan profil anak.");
     } finally {
       setIsPending(false);
@@ -126,7 +126,7 @@ export function ChildrenManagement({
     try {
       await updateChildProfile(id, formData);
       setEditingId(null);
-    } catch (error) {
+    } catch {
       alert("Gagal memperbarui profil anak.");
     } finally {
       setIsPending(false);
@@ -137,7 +137,7 @@ export function ChildrenManagement({
     setIsPending(true);
     try {
       await setActiveChild(id);
-    } catch (error) {
+    } catch {
       alert("Gagal memilih profil aktif.");
     } finally {
       setIsPending(false);
@@ -149,7 +149,7 @@ export function ChildrenManagement({
     setIsPending(true);
     try {
       await deleteChildProfile(id);
-    } catch (error) {
+    } catch {
       alert("Gagal menghapus profil.");
     } finally {
       setIsPending(false);
