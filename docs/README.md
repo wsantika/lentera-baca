@@ -20,5 +20,8 @@ Merangkum infrastruktur lokal menggunakan Docker, integrasi arsitektur Supabase 
 ### 4. [Folder Structure & Architecture](./FOLDER_STRUCTURE_AND_ARCHITECTURE.md)
 Menjelaskan arsitektur direktori kode dalam framework Next.js (App Router). Panduan ini mencakup aturan kapan menggunakan komponen Server vs Klien, arsitektur *offline-first* (sinkronisasi lokal ke Supabase), dan standarisasi manajemen aset visual/audio.
 
+### 5. [Audio Guideline & Assets Pipeline](./AUDIO_GUIDELINE.md)
+Panduan resmi proses rekaman suara (Voice Over). Berisi spesifikasi teknis format file, pengaturan intonasi (voice direction) ramah anak, konvensi penamaan folder/aset, serta naskah rekaman (script) lengkap untuk aplikasi.
+
 ---
 > **Catatan**: Jika Anda mengupdate atau menambahkan infrastruktur atau standar koding baru, harap perbarui dokumen yang relevan di folder ini.
