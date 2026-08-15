@@ -64,6 +64,7 @@ export function ReadingPractice() {
 
   const handleSelectOption = useCallback(
     (option: string) => {
+      setSelectedIndex(currentIndex);
       setSelectedOption(option);
 
       if (option === currentExercise.answer) {
@@ -73,7 +74,7 @@ export function ReadingPractice() {
         setFeedback("incorrect");
       }
     },
-    [completeReadingExercise, currentExercise.answer, currentExercise.id],
+    [completeReadingExercise, currentExercise.answer, currentExercise.id, currentIndex],
   );
 
   const handleRetry = useCallback(() => {
