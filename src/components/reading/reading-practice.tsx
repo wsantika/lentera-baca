@@ -122,6 +122,7 @@ export function ReadingPractice() {
           words={currentExercise.words}
           imageEmoji={currentExercise.imageEmoji}
           imageLabel={currentExercise.imageLabel}
+          imagePath={currentExercise.imagePath}
           onListen={handleListen}
           isSpeaking={isSpeaking}
         />
