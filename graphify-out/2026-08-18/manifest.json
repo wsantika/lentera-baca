@@ -90,9 +90,9 @@
     "semantic_hash": "bc20d02238e9cf9cc576b8569cb4359a"
   },
   "src/components/dashboard/learning-state-preview.tsx": {
-    "mtime": 1786982902.0795887,
-    "ast_hash": "d076a220cd6ab041965dac4d78047975",
-    "semantic_hash": ""
+    "mtime": 1777629732.9830544,
+    "ast_hash": "dcf510d9d971c8d4e475c8a608843b16",
+    "semantic_hash": "dcf510d9d971c8d4e475c8a608843b16"
   },
   "src/components/dashboard/letters-summary-card.tsx": {
     "mtime": 1777629732.9845707,
@@ -140,8 +140,8 @@
     "semantic_hash": "2657eb589f1e0cbc1ffe3037fa4d4a90"
   },
   "src/components/letters/letter-lesson.tsx": {
-    "mtime": 1786942131.9841404,
-    "ast_hash": "4a3599cc9f5fc72aed723a0ac898014f",
+    "mtime": 1786798741.1926398,
+    "ast_hash": "ebe58dbdcc95397bd8bcfe24f1bf2402",
     "semantic_hash": ""
   },
   "src/components/letters/letter-progress-header.tsx": {
@@ -155,7 +155,7 @@
     "semantic_hash": "c26fa3a54c942b4a929b6d518471ad8d"
   },
   "src/components/letters/letter-word-card.tsx": {
-    "mtime": 1786941034.782277,
+    "mtime": 1777629733.013978,
     "ast_hash": "71ed18f2e3497fab518e601c6d914576",
     "semantic_hash": "71ed18f2e3497fab518e601c6d914576"
   },
@@ -185,7 +185,7 @@
     "semantic_hash": "23448c2ca4e5bab1667fdfef3189e4a4"
   },
   "src/components/reading/reading-practice.tsx": {
-    "mtime": 1786941034.7945576,
+    "mtime": 1786798741.195736,
     "ast_hash": "8f96d08b10ce717cfb311f3639b95ef7",
     "semantic_hash": ""
   },
@@ -200,7 +200,7 @@
     "semantic_hash": "82884be9b2a16caa96e85e883209696d"
   },
   "src/components/reading/reading-stage-card.tsx": {
-    "mtime": 1786941034.808295,
+    "mtime": 1777629733.032982,
     "ast_hash": "6f5d655391ce3d6cda0d5bb490f10e9a",
     "semantic_hash": "6f5d655391ce3d6cda0d5bb490f10e9a"
   },
@@ -244,8 +244,13 @@
     "ast_hash": "b6cdfe07ca74a0d3d49ea73fe14cb897",
     "semantic_hash": "b6cdfe07ca74a0d3d49ea73fe14cb897"
   },
+  "src/lib/data/letters.ts": {
+    "mtime": 1777629733.0497289,
+    "ast_hash": "946cb2b09200f20f8c654fdb7d29eddc",
+    "semantic_hash": "946cb2b09200f20f8c654fdb7d29eddc"
+  },
   "src/lib/data/reading-exercises.ts": {
-    "mtime": 1786941034.8341146,
+    "mtime": 1777629733.0512488,
     "ast_hash": "5ea075c155a7da5cd226fb5518798be8",
     "semantic_hash": "5ea075c155a7da5cd226fb5518798be8"
   },
@@ -260,8 +265,8 @@
     "semantic_hash": "a1b302fe3d091af53f1052e1ae54fcae"
   },
   "src/lib/store/learning-store.tsx": {
-    "mtime": 1786942160.646533,
-    "ast_hash": "66dbbab697bf483a6e3bb1318d52a117",
+    "mtime": 1786545262.871311,
+    "ast_hash": "de4849ea1ed73da7704a52b47dbc42b0",
     "semantic_hash": ""
   },
   "src/lib/supabase/client.ts": {
@@ -305,7 +310,7 @@
     "semantic_hash": ""
   },
   ".agents/workflows/graphify.md": {
-    "mtime": 1786940934.0451038,
+    "mtime": 1785242816.8638167,
     "ast_hash": "637776aa6f7496d069afe7520c845c8a",
     "semantic_hash": ""
   },
@@ -355,8 +360,8 @@
     "semantic_hash": ""
   },
   "docs/README.md": {
-    "mtime": 1786802738.233711,
-    "ast_hash": "fd378845bde634f7368a927b44e34e7b",
+    "mtime": 1786798792.389971,
+    "ast_hash": "bc300e3e5aab7f40656c0492d780adfb",
     "semantic_hash": ""
   },
   "docs/mvp-accessibility-qa.md": {
@@ -500,8 +505,8 @@
     "semantic_hash": ""
   },
   "docs/AUDIO_GUIDELINE.md": {
-    "mtime": 1786802738.230158,
-    "ast_hash": "a35faad2b6c164014c651f376aaaf513",
+    "mtime": 1786798715.1915975,
+    "ast_hash": "64ca0112a6dea90b610c7f2aed1a080e",
     "semantic_hash": ""
   },
   "pr_body.txt": {
@@ -509,9 +514,9 @@
     "ast_hash": "8aecd59d9ea8e3cb334a7afd558e774b",
     "semantic_hash": ""
   },
-  "src/lib/data/learning-modules.ts": {
-    "mtime": 1786983274.1156645,
-    "ast_hash": "99d92321acd5aa8b2592895d80499bee",
+  "pr_body_audio.txt": {
+    "mtime": 1786798813.6721387,
+    "ast_hash": "38b4160914f444967232f5db990b0f12",
     "semantic_hash": ""
   }
 }

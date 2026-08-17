@@ -1,7 +1,7 @@
-# Graph Report - lentera-baca  (2026-08-18)
+# Graph Report - lentera-baca  (2026-08-15)
 
 ## Corpus Check
-- 94 files · ~29,738 words
+- 94 files · ~29,366 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a61a5f74`
+- Built from commit: `d9fc5652`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
