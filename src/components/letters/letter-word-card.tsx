@@ -3,7 +3,7 @@ import { Illustration } from "@/components/ui/illustration";
 type LetterWordCardProps = {
   emoji: string;
   word: string;
-  imagePath: string;
+  imagePath?: string;
 };
 
 export function LetterWordCard({ emoji, word, imagePath }: LetterWordCardProps) {
