@@ -3,6 +3,7 @@ import { Atkinson_Hyperlegible } from "next/font/google";
 
 import "./globals.css";
 
+import { cookies } from "next/headers";
 import { AppShell } from "@/components/layout/app-shell";
 import { AppProviders } from "@/components/providers/app-providers";
 import { siteConfig } from "@/config/site";
@@ -43,18 +44,20 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = await cookies();
+  const activeChildId = cookieStore.get("lentera_active_child")?.value || null;
   return (
     <html
       lang="id"
       className={cn("h-full scroll-smooth", readableFont.variable)}
     >
       <body className="min-h-dvh antialiased">
-        <AppProviders>
+        <AppProviders activeChildId={activeChildId}>
           <AppShell>{children}</AppShell>
         </AppProviders>
       </body>

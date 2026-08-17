@@ -4,8 +4,9 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 
 import { FeedbackMessage } from "@/components/ui/feedback-message";
 import { readingExercises } from "@/lib/data/reading-exercises";
-import { useSpeech } from "@/lib/hooks/use-speech";
+import { useAudioPlayer } from "@/lib/hooks/use-audio-player";
 import { useLearningStore } from "@/lib/store/learning-store";
+import { getReadingAudioPath } from "@/config/audio";
 import { ReadingFooterActions } from "./reading-footer-actions";
 import { ReadingProgressHeader } from "./reading-progress-header";
 import { ReadingQuestionCard } from "./reading-question-card";
@@ -31,7 +32,7 @@ function getLevel(completedCount: number) {
 
 export function ReadingPractice() {
   const { state, isHydrated, completeReadingExercise } = useLearningStore();
-  const { speak, isSpeaking } = useSpeech();
+  const { speak, isSpeaking } = useAudioPlayer();
 
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
@@ -55,15 +56,16 @@ export function ReadingPractice() {
   const level = getLevel(completedCount);
 
   const handleListen = useCallback(() => {
-    speak(currentExercise.speechText, {
-      lang: "id-ID",
-      rate: 0.8,
-      pitch: 1,
-    });
-  }, [currentExercise.speechText, speak]);
+    speak(
+      getReadingAudioPath(currentExercise.id),
+      currentExercise.speechText,
+      { lang: "id-ID", rate: 0.8, pitch: 1 }
+    );
+  }, [currentExercise.id, currentExercise.speechText, speak]);
 
   const handleSelectOption = useCallback(
     (option: string) => {
+      setSelectedIndex(currentIndex);
       setSelectedOption(option);
 
       if (option === currentExercise.answer) {
@@ -73,7 +75,7 @@ export function ReadingPractice() {
         setFeedback("incorrect");
       }
     },
-    [completeReadingExercise, currentExercise.answer, currentExercise.id],
+    [completeReadingExercise, currentExercise.answer, currentExercise.id, currentIndex],
   );
 
   const handleRetry = useCallback(() => {
@@ -120,6 +122,7 @@ export function ReadingPractice() {
           words={currentExercise.words}
           imageEmoji={currentExercise.imageEmoji}
           imageLabel={currentExercise.imageLabel}
+          imagePath={currentExercise.imagePath}
           onListen={handleListen}
           isSpeaking={isSpeaking}
         />

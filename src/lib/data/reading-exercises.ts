@@ -7,6 +7,7 @@ export type ReadingExercise = {
   options: [string, string];
   answer: string;
   speechText: string;
+  imagePath: string;
 };
 
 export const readingExercises: ReadingExercise[] = [
@@ -19,6 +20,7 @@ export const readingExercises: ReadingExercise[] = [
     options: ["bola", "ini"],
     answer: "bola",
     speechText: "Ini bola.",
+    imagePath: "/images/reading/reading-1.jpg",
   },
   {
     id: "reading-2",
@@ -29,6 +31,7 @@ export const readingExercises: ReadingExercise[] = [
     options: ["apel", "itu"],
     answer: "apel",
     speechText: "Itu apel.",
+    imagePath: "/images/reading/reading-2.jpg",
   },
   {
     id: "reading-3",
@@ -39,6 +42,7 @@ export const readingExercises: ReadingExercise[] = [
     options: ["ini", "buku"],
     answer: "buku",
     speechText: "Ini buku.",
+    imagePath: "/images/reading/reading-3.jpg",
   },
   {
     id: "reading-4",
@@ -49,6 +53,7 @@ export const readingExercises: ReadingExercise[] = [
     options: ["ikan", "itu"],
     answer: "ikan",
     speechText: "Itu ikan.",
+    imagePath: "/images/reading/reading-4.jpg",
   },
   {
     id: "reading-5",
@@ -59,5 +64,6 @@ export const readingExercises: ReadingExercise[] = [
     options: ["ini", "topi"],
     answer: "topi",
     speechText: "Ini topi.",
+    imagePath: "/images/reading/reading-5.jpg",
   },
 ];

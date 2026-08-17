@@ -538,15 +538,16 @@ Service worker hanya diregister pada production mode agar development tidak terg
 
 ---
 
-## 13. Installation
+## 13. Installation & Environment Setup
 
 ### 13.1 Prerequisites
 
 Pastikan sudah menginstall:
 
-- Node.js;
+- Node.js (v20+);
 - npm;
-- Git.
+- Git;
+- Docker & Docker Desktop (Opsional, untuk lingkungan dev berbasis kontainer).
 
 Cek versi:
 
@@ -554,6 +555,7 @@ Cek versi:
 node -v
 npm -v
 git --version
+docker --version
 ```
 
 ### 13.2 Clone Repository
@@ -563,37 +565,61 @@ git clone https://github.com/wsantika/lentera-baca.git
 cd lentera-baca
 ```
 
-### 13.3 Install Dependencies
+### 13.3 Environment Variables Setup
+
+Salin berkas `.env.example` menjadi `.env.local`:
 
 ```bash
-npm install
+cp .env.example .env.local
+```
+
+Isikan variabel Supabase dari dashboard [Supabase](https://supabase.com) atau Supabase CLI lokal:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=https://your-project-id.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key-here
 ```
 
 ---
 
 ## 14. Running the Project
 
-### 14.1 Development Mode
+### 14.1 Running via Docker (Recommended)
+
+Jalankan aplikasi beserta environment terisolasi menggunakan Docker Compose:
 
 ```bash
+# Jalankan kontainer di background
+docker compose up -d
+
+# Untuk melihat log aplikasi:
+docker compose logs -f app
+
+# Untuk menghentikan kontainer:
+docker compose down
+```
+
+Aplikasi dapat diakses di browser pada URL: `http://localhost:3000`.
+
+### 14.2 Running Locally (Node.js)
+
+```bash
+# Install dependensi
+npm install
+
+# Menjalankan development server
 npm run dev
 ```
 
-Buka aplikasi di browser:
+Buka aplikasi di browser: `http://localhost:3000`.
 
-```txt
-http://localhost:3000
-```
-
-### 14.2 Production Build
+### 14.3 Production Build & Preview
 
 ```bash
+# Production Build
 npm run build
-```
 
-### 14.3 Production Preview
-
-```bash
+# Production Preview
 npm run start
 ```
 

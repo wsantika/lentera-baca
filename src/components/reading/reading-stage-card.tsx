@@ -2,11 +2,13 @@
 
 import { Volume2 } from "lucide-react";
 import { motion } from "framer-motion";
+import { Illustration } from "@/components/ui/illustration";
 
 type ReadingStageCardProps = {
   words: [string, string];
   imageEmoji: string;
   imageLabel: string;
+  imagePath: string;
   onListen: () => void;
   isSpeaking: boolean;
 };
@@ -15,6 +17,7 @@ export function ReadingStageCard({
   words,
   imageEmoji,
   imageLabel,
+  imagePath,
   onListen,
   isSpeaking,
 }: ReadingStageCardProps) {
@@ -34,17 +37,20 @@ export function ReadingStageCard({
       <div className="mt-8 flex justify-center">
         <div className="flex aspect-square w-full max-w-[240px] items-center justify-center rounded-[2rem] bg-[#ece8e1] p-4 sm:max-w-[280px]">
           <div className="flex h-full w-full items-center justify-center rounded-[1.5rem] bg-white shadow-sm">
-            <motion.span
+            <motion.div
               key={imageEmoji}
               initial={{ opacity: 0, scale: 0.92 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.25 }}
-              className="text-[7rem] leading-none sm:text-[8rem]"
-              role="img"
-              aria-label={imageLabel}
+              className="w-full h-full"
             >
-              {imageEmoji}
-            </motion.span>
+              <Illustration
+                src={imagePath}
+                alt={imageLabel}
+                fallbackEmoji={imageEmoji}
+                className="w-full h-full rounded-[1.5rem]"
+              />
+            </motion.div>
           </div>
         </div>
       </div>
