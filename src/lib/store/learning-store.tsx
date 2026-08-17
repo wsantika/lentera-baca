@@ -39,7 +39,7 @@ type LearningStoreValue = {
   activeChildId: string | null;
   setName: (name: string) => void;
   addPoints: (amount: number) => void;
-  completeLetter: (letter: string) => void;
+  completeModule: (moduleId: string, points: number) => void;
   completeReadingExercise: (exerciseId: string) => void;
   updateSettings: (settings: Partial<LearningSettings>) => void;
   resetProgress: () => void;
@@ -118,7 +118,13 @@ function normalizeState(value: unknown): LearningState {
         : defaultState.name,
     points: typeof record.points === "number" ? Math.max(0, record.points) : 0,
     streak: typeof record.streak === "number" ? Math.max(0, record.streak) : 0,
-    completedLetters: normalizeStringArray(record.completedLetters),
+    completedLetters: normalizeStringArray(record.completedLetters).map((l) => {
+      // Migrate old letter progress ("A") to new ID ("letter-a")
+      if (l.length === 1 && /[A-Z]/.test(l)) {
+        return `letter-${l.toLowerCase()}`;
+      }
+      return l;
+    }),
     completedReadingIds: normalizeStringArray(record.completedReadingIds),
     settings: {
       textSize: normalizeTextSize(record.settings?.textSize),
@@ -222,25 +228,25 @@ export function LearningStoreProvider({
     });
   }, []);
 
-  const completeLetter = useCallback((letter: string) => {
+  const completeModule = useCallback((moduleId: string, earnedPoints: number) => {
     setState((currentState) => {
-      const normalizedLetter = letter.trim().toUpperCase();
+      const normalizedId = moduleId.trim();
 
-      if (!normalizedLetter) {
+      if (!normalizedId) {
         return currentState;
       }
 
       const activeState = updateStreak(currentState);
       const alreadyCompleted =
-        activeState.completedLetters.includes(normalizedLetter);
+        activeState.completedLetters.includes(normalizedId);
 
       return {
         ...activeState,
         completedLetters: addUniqueItem(
           activeState.completedLetters,
-          normalizedLetter,
+          normalizedId,
         ),
-        points: alreadyCompleted ? activeState.points : activeState.points + 5,
+        points: alreadyCompleted ? activeState.points : activeState.points + earnedPoints,
       };
     });
   }, []);
@@ -295,7 +301,12 @@ export function LearningStoreProvider({
     }) => {
       setState((currentState) => ({
         ...currentState,
-        completedLetters: dbState.completedLetters,
+        completedLetters: dbState.completedLetters.map((l) => {
+          if (l.length === 1 && /[A-Z]/.test(l)) {
+            return `letter-${l.toLowerCase()}`;
+          }
+          return l;
+        }),
         completedReadingIds: dbState.completedReadingIds,
         points: dbState.points,
         name: dbState.name || currentState.name,
@@ -311,7 +322,7 @@ export function LearningStoreProvider({
       activeChildId: activeChildId ?? null,
       setName,
       addPoints,
-      completeLetter,
+      completeModule,
       completeReadingExercise,
       updateSettings,
       resetProgress,
@@ -323,7 +334,7 @@ export function LearningStoreProvider({
       activeChildId,
       setName,
       addPoints,
-      completeLetter,
+      completeModule,
       completeReadingExercise,
       updateSettings,
       resetProgress,
