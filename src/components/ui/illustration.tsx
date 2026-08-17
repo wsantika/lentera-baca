@@ -5,7 +5,7 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 interface IllustrationProps {
-  src: string;
+  src?: string;
   alt: string;
   fallbackEmoji: string;
   className?: string;
