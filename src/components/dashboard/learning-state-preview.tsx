@@ -28,7 +28,7 @@ export function LearningStatePreview() {
     state,
     isHydrated,
     addPoints,
-    completeLetter,
+    completeModule,
     completeReadingExercise,
     updateSettings,
     resetProgress,
@@ -98,9 +98,9 @@ export function LearningStatePreview() {
 
               <ChildButton
                 variant="secondary"
-                onClick={() => completeLetter("A")}
+                onClick={() => completeModule("letter-a", 5)}
               >
-                Tandai huruf A
+                Tandai modul A
               </ChildButton>
 
               <ChildButton

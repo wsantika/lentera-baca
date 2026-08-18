@@ -1,17 +1,21 @@
-export type LetterItem = {
+export type LearningModuleItem = {
   id: string;
+  level: number;
+  category: "vowel" | "consonant" | "syllable" | "word";
   letter: string;
   word: string;
   syllables: string;
   emoji: string;
   speechText: string;
-  imagePath: string;
+  imagePath?: string;
 };
 
-export const letters: LetterItem[] = [
+export const learningModules: LearningModuleItem[] = [
   {
     id: "letter-a",
     letter: "A",
+    level: 1,
+    category: "consonant",
     word: "Apel",
     syllables: "A - pe - l",
     emoji: "🍏",
@@ -21,6 +25,8 @@ export const letters: LetterItem[] = [
   {
     id: "letter-b",
     letter: "B",
+    level: 1,
+    category: "consonant",
     word: "Bebek",
     syllables: "B - be - bek",
     emoji: "🦆",
@@ -30,6 +36,8 @@ export const letters: LetterItem[] = [
   {
     id: "letter-c",
     letter: "C",
+    level: 1,
+    category: "consonant",
     word: "Ceri",
     syllables: "C - ce - ri",
     emoji: "🍒",
@@ -39,6 +47,8 @@ export const letters: LetterItem[] = [
   {
     id: "letter-d",
     letter: "D",
+    level: 1,
+    category: "consonant",
     word: "Dadu",
     syllables: "D - da - du",
     emoji: "🎲",
@@ -48,6 +58,8 @@ export const letters: LetterItem[] = [
   {
     id: "letter-e",
     letter: "E",
+    level: 1,
+    category: "consonant",
     word: "Elang",
     syllables: "E - e - lang",
     emoji: "🦅",
@@ -57,6 +69,8 @@ export const letters: LetterItem[] = [
   {
     id: "letter-f",
     letter: "F",
+    level: 1,
+    category: "consonant",
     word: "Foto",
     syllables: "F - fo - to",
     emoji: "📷",
@@ -66,6 +80,8 @@ export const letters: LetterItem[] = [
   {
     id: "letter-g",
     letter: "G",
+    level: 1,
+    category: "consonant",
     word: "Gajah",
     syllables: "G - ga - jah",
     emoji: "🐘",
@@ -75,6 +91,8 @@ export const letters: LetterItem[] = [
   {
     id: "letter-h",
     letter: "H",
+    level: 1,
+    category: "consonant",
     word: "Hujan",
     syllables: "H - hu - jan",
     emoji: "🌧️",
@@ -84,6 +102,8 @@ export const letters: LetterItem[] = [
   {
     id: "letter-i",
     letter: "I",
+    level: 1,
+    category: "consonant",
     word: "Ikan",
     syllables: "I - i - kan",
     emoji: "🐟",
@@ -93,6 +113,8 @@ export const letters: LetterItem[] = [
   {
     id: "letter-j",
     letter: "J",
+    level: 1,
+    category: "consonant",
     word: "Jeruk",
     syllables: "J - je - ruk",
     emoji: "🍊",
@@ -102,6 +124,8 @@ export const letters: LetterItem[] = [
   {
     id: "letter-k",
     letter: "K",
+    level: 1,
+    category: "consonant",
     word: "Kelinci",
     syllables: "K - ke - lin - ci",
     emoji: "🐇",
@@ -111,6 +135,8 @@ export const letters: LetterItem[] = [
   {
     id: "letter-l",
     letter: "L",
+    level: 1,
+    category: "consonant",
     word: "Lilin",
     syllables: "L - li - lin",
     emoji: "🕯️",
@@ -120,6 +146,8 @@ export const letters: LetterItem[] = [
   {
     id: "letter-m",
     letter: "M",
+    level: 1,
+    category: "consonant",
     word: "Mangga",
     syllables: "M - mang - ga",
     emoji: "🥭",
@@ -129,6 +157,8 @@ export const letters: LetterItem[] = [
   {
     id: "letter-n",
     letter: "N",
+    level: 1,
+    category: "consonant",
     word: "Nanas",
     syllables: "N - na - nas",
     emoji: "🍍",
@@ -138,6 +168,8 @@ export const letters: LetterItem[] = [
   {
     id: "letter-o",
     letter: "O",
+    level: 1,
+    category: "consonant",
     word: "Obor",
     syllables: "O - o - bor",
     emoji: "🔥",
@@ -147,6 +179,8 @@ export const letters: LetterItem[] = [
   {
     id: "letter-p",
     letter: "P",
+    level: 1,
+    category: "consonant",
     word: "Pesawat",
     syllables: "P - pe - sa - wat",
     emoji: "✈️",
@@ -156,6 +190,8 @@ export const letters: LetterItem[] = [
   {
     id: "letter-q",
     letter: "Q",
+    level: 1,
+    category: "consonant",
     word: "Qari",
     syllables: "Q - qa - ri",
     emoji: "📖",
@@ -165,6 +201,8 @@ export const letters: LetterItem[] = [
   {
     id: "letter-r",
     letter: "R",
+    level: 1,
+    category: "consonant",
     word: "Roti",
     syllables: "R - ro - ti",
     emoji: "🍞",
@@ -174,6 +212,8 @@ export const letters: LetterItem[] = [
   {
     id: "letter-s",
     letter: "S",
+    level: 1,
+    category: "consonant",
     word: "Sapi",
     syllables: "S - sa - pi",
     emoji: "🐄",
@@ -183,6 +223,8 @@ export const letters: LetterItem[] = [
   {
     id: "letter-t",
     letter: "T",
+    level: 1,
+    category: "consonant",
     word: "Topi",
     syllables: "T - to - pi",
     emoji: "🎩",
@@ -192,6 +234,8 @@ export const letters: LetterItem[] = [
   {
     id: "letter-u",
     letter: "U",
+    level: 1,
+    category: "consonant",
     word: "Ular",
     syllables: "U - u - lar",
     emoji: "🐍",
@@ -201,6 +245,8 @@ export const letters: LetterItem[] = [
   {
     id: "letter-v",
     letter: "V",
+    level: 1,
+    category: "consonant",
     word: "Vas",
     syllables: "V - vas",
     emoji: "🏺",
@@ -210,6 +256,8 @@ export const letters: LetterItem[] = [
   {
     id: "letter-w",
     letter: "W",
+    level: 1,
+    category: "consonant",
     word: "Wortel",
     syllables: "W - wor - tel",
     emoji: "🥕",
@@ -219,6 +267,8 @@ export const letters: LetterItem[] = [
   {
     id: "letter-x",
     letter: "X",
+    level: 1,
+    category: "consonant",
     word: "Xilofon",
     syllables: "X - xi - lo - fon",
     emoji: "🎼",
@@ -228,6 +278,8 @@ export const letters: LetterItem[] = [
   {
     id: "letter-y",
     letter: "Y",
+    level: 1,
+    category: "consonant",
     word: "Yoyo",
     syllables: "Y - yo - yo",
     emoji: "🪀",
@@ -237,10 +289,89 @@ export const letters: LetterItem[] = [
   {
     id: "letter-z",
     letter: "Z",
+    level: 1,
+    category: "consonant",
     word: "Zebra",
     syllables: "Z - ze - bra",
     emoji: "🦓",
     speechText: "Z. Zebra.",
     imagePath: "/images/letters/Z.jpg",
+  },
+  {
+    id: "syllable-ba",
+    level: 2,
+    category: "syllable",
+    letter: "ba",
+    word: "baju",
+    syllables: "ba - ju",
+    emoji: "👕",
+    speechText: "ba. baju.",
+    imagePath: "/images/syllables/ba.jpg",
+  },
+  {
+    id: "syllable-bi",
+    level: 2,
+    category: "syllable",
+    letter: "bi",
+    word: "biru",
+    syllables: "bi - ru",
+    emoji: "🟦",
+    speechText: "bi. biru.",
+    imagePath: "/images/syllables/bi.jpg",
+  },
+  {
+    id: "syllable-bu",
+    level: 2,
+    category: "syllable",
+    letter: "bu",
+    word: "buku",
+    syllables: "bu - ku",
+    emoji: "📚",
+    speechText: "bu. buku.",
+    imagePath: "/images/syllables/bu.jpg",
+  },
+  {
+    id: "syllable-be",
+    level: 2,
+    category: "syllable",
+    letter: "be",
+    word: "bebek",
+    syllables: "be - bek",
+    emoji: "🦆",
+    speechText: "be. bebek.",
+    imagePath: "/images/letters/B.jpg",
+  },
+  {
+    id: "syllable-bo",
+    level: 2,
+    category: "syllable",
+    letter: "bo",
+    word: "bola",
+    syllables: "bo - la",
+    emoji: "⚽",
+    speechText: "bo. bola.",
+    imagePath: "/images/reading/reading-1.jpg",
+  },
+  {
+    id: "word-baca",
+    level: 3,
+    category: "word",
+    letter: "baca",
+    word: "baca buku",
+    syllables: "ba - ca  bu - ku",
+    emoji: "📖",
+    speechText: "baca. baca buku.",
+    imagePath: "/images/letters/Q.jpg",
+  },
+  {
+    id: "word-bola",
+    level: 3,
+    category: "word",
+    letter: "bola",
+    word: "main bola",
+    syllables: "ma - in  bo - la",
+    emoji: "⚽",
+    speechText: "bola. main bola.",
+    imagePath: "/images/reading/reading-1.jpg",
   },
 ];
