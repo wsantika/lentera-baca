@@ -450,7 +450,7 @@
     "semantic_hash": ""
   },
   "src/components/parent/children-management.tsx": {
-    "mtime": 1787027918.795607,
+    "mtime": 1787060821.8176458,
     "ast_hash": "adfa0b19338f1789c0136ec6d9ba3759",
     "semantic_hash": ""
   },
@@ -515,8 +515,8 @@
     "semantic_hash": ""
   },
   "src/app/parent/progress/[id]/page.tsx": {
-    "mtime": 1787028138.5959613,
-    "ast_hash": "7c5d131730858c142ecd9e04e88a84e5",
+    "mtime": 1787060821.815614,
+    "ast_hash": "543a93a1e5e7ccea89247c64ea4c1105",
     "semantic_hash": ""
   },
   "src/components/ui/illustration.tsx": {
@@ -587,6 +587,11 @@
   "public/images/reading/reading-4.jpg": {
     "mtime": 1786984832.5284476,
     "ast_hash": "4ce2a60f4435b1b43262e7457d9b0e78",
+    "semantic_hash": ""
+  },
+  "docs/PRIVACY_SAFETY_AUDIT.md": {
+    "mtime": 1787060834.5419993,
+    "ast_hash": "791b2ca8fe298f422054753d4b585760",
     "semantic_hash": ""
   }
 }
