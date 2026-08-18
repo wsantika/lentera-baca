@@ -3420,8 +3420,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_lib_store_learning_store_textsize",
-      "community": 11,
-      "community_name": "learning-store.tsx",
+      "community": 0,
+      "community_name": "cn",
       "norm_label": "textsize"
     },
     {
@@ -6162,6 +6162,105 @@
       "community": 10,
       "community_name": "AI Agent Guidelines (Do's & Don'ts)",
       "norm_label": "4. pipeline ci/cd"
+    },
+    {
+      "label": "PRIVACY_SAFETY_AUDIT.md",
+      "file_type": "document",
+      "source_file": "docs/PRIVACY_SAFETY_AUDIT.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_privacy_safety_audit",
+      "community": 46,
+      "community_name": "Audit Checklist & Verification",
+      "norm_label": "privacy_safety_audit.md"
+    },
+    {
+      "label": "\ud83d\udee1\ufe0f Privacy & Child Safety Audit \u2014 MVP V2",
+      "file_type": "document",
+      "source_file": "docs/PRIVACY_SAFETY_AUDIT.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_privacy_safety_audit_privacy_child_safety_audit_mvp_v2",
+      "community": 46,
+      "community_name": "Audit Checklist & Verification",
+      "norm_label": "\ud83d\udee1\ufe0f privacy & child safety audit \u2014 mvp v2"
+    },
+    {
+      "label": "Overview",
+      "file_type": "document",
+      "source_file": "docs/PRIVACY_SAFETY_AUDIT.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "docs_privacy_safety_audit_overview",
+      "community": 46,
+      "community_name": "Audit Checklist & Verification",
+      "norm_label": "overview"
+    },
+    {
+      "label": "Audit Checklist & Verification",
+      "file_type": "document",
+      "source_file": "docs/PRIVACY_SAFETY_AUDIT.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "docs_privacy_safety_audit_audit_checklist_verification",
+      "community": 46,
+      "community_name": "Audit Checklist & Verification",
+      "norm_label": "audit checklist & verification"
+    },
+    {
+      "label": "1. Perlindungan Data Anak (Row Level Security)",
+      "file_type": "document",
+      "source_file": "docs/PRIVACY_SAFETY_AUDIT.md",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "docs_privacy_safety_audit_1_perlindungan_data_anak_row_level_security",
+      "community": 46,
+      "community_name": "Audit Checklist & Verification",
+      "norm_label": "1. perlindungan data anak (row level security)"
+    },
+    {
+      "label": "2. Eksposur Data Publik (Leaderboard & Komunitas)",
+      "file_type": "document",
+      "source_file": "docs/PRIVACY_SAFETY_AUDIT.md",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "docs_privacy_safety_audit_2_eksposur_data_publik_leaderboard_komunitas",
+      "community": 46,
+      "community_name": "Audit Checklist & Verification",
+      "norm_label": "2. eksposur data publik (leaderboard & komunitas)"
+    },
+    {
+      "label": "3. Iklan, Analitik Pihak Ketiga & Tautan Eksternal",
+      "file_type": "document",
+      "source_file": "docs/PRIVACY_SAFETY_AUDIT.md",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "docs_privacy_safety_audit_3_iklan_analitik_pihak_ketiga_tautan_eksternal",
+      "community": 46,
+      "community_name": "Audit Checklist & Verification",
+      "norm_label": "3. iklan, analitik pihak ketiga & tautan eksternal"
+    },
+    {
+      "label": "4. Kebijakan Privasi Orang Tua",
+      "file_type": "document",
+      "source_file": "docs/PRIVACY_SAFETY_AUDIT.md",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "docs_privacy_safety_audit_4_kebijakan_privasi_orang_tua",
+      "community": 46,
+      "community_name": "Audit Checklist & Verification",
+      "norm_label": "4. kebijakan privasi orang tua"
+    },
+    {
+      "label": "Kesimpulan",
+      "file_type": "document",
+      "source_file": "docs/PRIVACY_SAFETY_AUDIT.md",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "docs_privacy_safety_audit_kesimpulan",
+      "community": 46,
+      "community_name": "Audit Checklist & Verification",
+      "norm_label": "kesimpulan"
     },
     {
       "label": "docs/README.md",
@@ -14985,6 +15084,94 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/PRIVACY_SAFETY_AUDIT.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_privacy_safety_audit",
+      "target": "docs_privacy_safety_audit_privacy_child_safety_audit_mvp_v2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PRIVACY_SAFETY_AUDIT.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_privacy_safety_audit_privacy_child_safety_audit_mvp_v2",
+      "target": "docs_privacy_safety_audit_audit_checklist_verification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PRIVACY_SAFETY_AUDIT.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_privacy_safety_audit_privacy_child_safety_audit_mvp_v2",
+      "target": "docs_privacy_safety_audit_kesimpulan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PRIVACY_SAFETY_AUDIT.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_privacy_safety_audit_privacy_child_safety_audit_mvp_v2",
+      "target": "docs_privacy_safety_audit_overview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PRIVACY_SAFETY_AUDIT.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_privacy_safety_audit_audit_checklist_verification",
+      "target": "docs_privacy_safety_audit_1_perlindungan_data_anak_row_level_security",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PRIVACY_SAFETY_AUDIT.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_privacy_safety_audit_audit_checklist_verification",
+      "target": "docs_privacy_safety_audit_2_eksposur_data_publik_leaderboard_komunitas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PRIVACY_SAFETY_AUDIT.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_privacy_safety_audit_audit_checklist_verification",
+      "target": "docs_privacy_safety_audit_3_iklan_analitik_pihak_ketiga_tautan_eksternal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PRIVACY_SAFETY_AUDIT.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_privacy_safety_audit_audit_checklist_verification",
+      "target": "docs_privacy_safety_audit_4_kebijakan_privasi_orang_tua",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/README.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -15501,5 +15688,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "ea251a5d95f5d84d9c077e6fa937b371b50a929b"
+  "built_at_commit": "09b3c69f06f36434c7c246d7032be8eef670da81"
 }
