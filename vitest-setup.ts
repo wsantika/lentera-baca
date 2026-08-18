@@ -25,4 +25,4 @@ class MockAudio {
   });
   removeEventListener = vi.fn();
 }
-global.Audio = MockAudio as any;
+global.Audio = MockAudio as unknown as typeof Audio;
