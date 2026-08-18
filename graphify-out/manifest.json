@@ -90,7 +90,7 @@
     "semantic_hash": "bc20d02238e9cf9cc576b8569cb4359a"
   },
   "src/components/dashboard/learning-state-preview.tsx": {
-    "mtime": 1786982902.0795887,
+    "mtime": 1787027847.8067846,
     "ast_hash": "d076a220cd6ab041965dac4d78047975",
     "semantic_hash": ""
   },
@@ -140,8 +140,8 @@
     "semantic_hash": "2657eb589f1e0cbc1ffe3037fa4d4a90"
   },
   "src/components/letters/letter-lesson.tsx": {
-    "mtime": 1786942131.9841404,
-    "ast_hash": "4a3599cc9f5fc72aed723a0ac898014f",
+    "mtime": 1787027847.8366742,
+    "ast_hash": "5abadd103e5fdeaf02f15dac1cda01d2",
     "semantic_hash": ""
   },
   "src/components/letters/letter-progress-header.tsx": {
@@ -155,9 +155,9 @@
     "semantic_hash": "c26fa3a54c942b4a929b6d518471ad8d"
   },
   "src/components/letters/letter-word-card.tsx": {
-    "mtime": 1786941034.782277,
-    "ast_hash": "71ed18f2e3497fab518e601c6d914576",
-    "semantic_hash": "71ed18f2e3497fab518e601c6d914576"
+    "mtime": 1787027847.8531532,
+    "ast_hash": "64ba88ad3871d1e4345846ef309b9a81",
+    "semantic_hash": ""
   },
   "src/components/profile/profile-page-content.tsx": {
     "mtime": 1785159073.9371912,
@@ -185,8 +185,8 @@
     "semantic_hash": "23448c2ca4e5bab1667fdfef3189e4a4"
   },
   "src/components/reading/reading-practice.tsx": {
-    "mtime": 1786941034.7945576,
-    "ast_hash": "8f96d08b10ce717cfb311f3639b95ef7",
+    "mtime": 1786984832.5465825,
+    "ast_hash": "6861f050d39520b3ebad9bf03507a56d",
     "semantic_hash": ""
   },
   "src/components/reading/reading-progress-header.tsx": {
@@ -200,9 +200,9 @@
     "semantic_hash": "82884be9b2a16caa96e85e883209696d"
   },
   "src/components/reading/reading-stage-card.tsx": {
-    "mtime": 1786941034.808295,
-    "ast_hash": "6f5d655391ce3d6cda0d5bb490f10e9a",
-    "semantic_hash": "6f5d655391ce3d6cda0d5bb490f10e9a"
+    "mtime": 1786984832.548188,
+    "ast_hash": "c08bf30fa8d715ce7d74d6ea87b89355",
+    "semantic_hash": ""
   },
   "src/components/ui/button.tsx": {
     "mtime": 1777558008.3116238,
@@ -245,9 +245,9 @@
     "semantic_hash": "b6cdfe07ca74a0d3d49ea73fe14cb897"
   },
   "src/lib/data/reading-exercises.ts": {
-    "mtime": 1786941034.8341146,
-    "ast_hash": "5ea075c155a7da5cd226fb5518798be8",
-    "semantic_hash": "5ea075c155a7da5cd226fb5518798be8"
+    "mtime": 1786984832.572746,
+    "ast_hash": "ca0c6e061d888b9f8a8b5c2f84e4ab76",
+    "semantic_hash": ""
   },
   "src/lib/hooks/use-mounted.ts": {
     "mtime": 1777629733.0522795,
@@ -260,7 +260,7 @@
     "semantic_hash": "a1b302fe3d091af53f1052e1ae54fcae"
   },
   "src/lib/store/learning-store.tsx": {
-    "mtime": 1786942160.646533,
+    "mtime": 1787027847.916854,
     "ast_hash": "66dbbab697bf483a6e3bb1318d52a117",
     "semantic_hash": ""
   },
@@ -450,8 +450,8 @@
     "semantic_hash": ""
   },
   "src/components/parent/children-management.tsx": {
-    "mtime": 1786798741.1947095,
-    "ast_hash": "215f9a9a9a82d68a03d306f0d8cc3288",
+    "mtime": 1787027918.795607,
+    "ast_hash": "adfa0b19338f1789c0136ec6d9ba3759",
     "semantic_hash": ""
   },
   ".github/workflows/ci.yml": {
@@ -510,8 +510,83 @@
     "semantic_hash": ""
   },
   "src/lib/data/learning-modules.ts": {
-    "mtime": 1786983274.1156645,
-    "ast_hash": "99d92321acd5aa8b2592895d80499bee",
+    "mtime": 1787027847.8876188,
+    "ast_hash": "33881b0fd3b643c4cf50852924ff70e4",
+    "semantic_hash": ""
+  },
+  "src/app/parent/progress/[id]/page.tsx": {
+    "mtime": 1787028138.5959613,
+    "ast_hash": "7c5d131730858c142ecd9e04e88a84e5",
+    "semantic_hash": ""
+  },
+  "src/components/ui/illustration.tsx": {
+    "mtime": 1787027847.8709955,
+    "ast_hash": "95d39d0e5375ab9fb0ed570b5cf8edda",
+    "semantic_hash": ""
+  },
+  "public/images/letters/A.jpg": {
+    "mtime": 1786984832.4880412,
+    "ast_hash": "6bcf580d28af4f46f7cbe961784742e9",
+    "semantic_hash": ""
+  },
+  "public/images/letters/B.jpg": {
+    "mtime": 1786984832.4921522,
+    "ast_hash": "611d6a844ee8f3fa15ae11ed0cd1117d",
+    "semantic_hash": ""
+  },
+  "public/images/letters/C.jpg": {
+    "mtime": 1786984832.4953628,
+    "ast_hash": "ca52b97ab2af1b51c24f602cc03e838f",
+    "semantic_hash": ""
+  },
+  "public/images/letters/D.jpg": {
+    "mtime": 1786984832.4991064,
+    "ast_hash": "8a2f09df6594c44d7cdbda0233e78a52",
+    "semantic_hash": ""
+  },
+  "public/images/letters/E.jpg": {
+    "mtime": 1786984832.503728,
+    "ast_hash": "64a4a2e8e4ae8a2bde0e3bffed75b06f",
+    "semantic_hash": ""
+  },
+  "public/images/letters/F.jpg": {
+    "mtime": 1786984832.5069735,
+    "ast_hash": "600c4d4dd6d7b7204518cdee5b2f7f85",
+    "semantic_hash": ""
+  },
+  "public/images/letters/G.jpg": {
+    "mtime": 1786984832.510201,
+    "ast_hash": "0062accd91c85fbe80f7cfb0b64f7bc9",
+    "semantic_hash": ""
+  },
+  "public/images/letters/H.jpg": {
+    "mtime": 1786984832.5127454,
+    "ast_hash": "bcb351754f0cb5b19d7be56ee2942138",
+    "semantic_hash": ""
+  },
+  "public/images/letters/I.jpg": {
+    "mtime": 1786984832.516716,
+    "ast_hash": "4ce2a60f4435b1b43262e7457d9b0e78",
+    "semantic_hash": ""
+  },
+  "public/images/letters/J.jpg": {
+    "mtime": 1786984832.518656,
+    "ast_hash": "9a58a3fad18b5ec8f99007f7d4ad5e5e",
+    "semantic_hash": ""
+  },
+  "public/images/letters/M.jpg": {
+    "mtime": 1786984832.5219126,
+    "ast_hash": "b531230e26b62f505fcb72a43b47827b",
+    "semantic_hash": ""
+  },
+  "public/images/reading/reading-2.jpg": {
+    "mtime": 1786984832.5259204,
+    "ast_hash": "6bcf580d28af4f46f7cbe961784742e9",
+    "semantic_hash": ""
+  },
+  "public/images/reading/reading-4.jpg": {
+    "mtime": 1786984832.5284476,
+    "ast_hash": "4ce2a60f4435b1b43262e7457d9b0e78",
     "semantic_hash": ""
   }
 }
