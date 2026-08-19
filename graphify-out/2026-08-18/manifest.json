@@ -15,9 +15,9 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1787062137.3981996,
-    "ast_hash": "833d3eef3a5c1d37a30d79068e643955",
-    "semantic_hash": ""
+    "mtime": 1785159073.934076,
+    "ast_hash": "cf1f007168dd7f2da306303b967fc7eb",
+    "semantic_hash": "cf1f007168dd7f2da306303b967fc7eb"
   },
   "postcss.config.mjs": {
     "mtime": 1776588665.0663035,
@@ -590,33 +590,8 @@
     "semantic_hash": ""
   },
   "docs/PRIVACY_SAFETY_AUDIT.md": {
-    "mtime": 1787061313.423381,
-    "ast_hash": "2eed33d6fd03d6626456f51183eb9dc8",
-    "semantic_hash": ""
-  },
-  "src/components/letters/__tests__/letter-word-card.test.tsx": {
-    "mtime": 1787062137.3989942,
-    "ast_hash": "c48ee72dd7c5f8f9aee039d69f4153bf",
-    "semantic_hash": ""
-  },
-  "vitest-setup.ts": {
-    "mtime": 1787062137.3989942,
-    "ast_hash": "05f270d29a1f9e44bf2c7245fd344632",
-    "semantic_hash": ""
-  },
-  "vitest.config.mts": {
-    "mtime": 1787062137.402041,
-    "ast_hash": "9c4fd48387e552e9452b6035c213525f",
-    "semantic_hash": ""
-  },
-  ".github/workflows/test.yml": {
-    "mtime": 1787062137.3901792,
-    "ast_hash": "119c9c8f2ec3fb3839f12e4ab8052dd2",
-    "semantic_hash": ""
-  },
-  "docs/DEPLOYMENT.md": {
-    "mtime": 1787062152.2550244,
-    "ast_hash": "7241dcc3eab78b97cf596c4acd817af1",
+    "mtime": 1787060834.5419993,
+    "ast_hash": "791b2ca8fe298f422054753d4b585760",
     "semantic_hash": ""
   }
 }

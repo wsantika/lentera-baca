@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Plus, Check, Trash2, Edit2 } from "lucide-react";
+import Link from "next/link";
+import { Plus, Check, Trash2, Edit2, LineChart } from "lucide-react";
 import {
   createChildProfile,
   updateChildProfile,
@@ -236,6 +237,13 @@ export function ChildrenManagement({
                       Pilih
                     </button>
                   )}
+                  <Link
+                    href={`/parent/progress/${child.id}`}
+                    className="flex items-center gap-1 rounded-lg bg-orange-100 px-3 py-1.5 text-xs font-medium text-orange-700 shadow-sm hover:bg-orange-200"
+                  >
+                    <LineChart className="h-3 w-3" />
+                    Progres
+                  </Link>
                   <button
                     onClick={() => setEditingId(child.id)}
                     disabled={isPending || isAdding || editingId !== null}

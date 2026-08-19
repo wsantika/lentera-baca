@@ -7,7 +7,7 @@
   "5": "components.json",
   "6": "Ringkasan Perubahan",
   "7": "leaderboard-page-content.tsx",
-  "8": "app/layout.tsx",
+  "8": "app-shell.tsx",
   "9": "home-dashboard.tsx",
   "10": "AI Agent Guidelines (Do's & Don'ts)",
   "11": "learning-store.tsx",
@@ -44,9 +44,5 @@
   "42": "login/layout.tsx",
   "43": "signup/layout.tsx",
   "44": "Audio Assets — Lentera Baca",
-  "45": "use-speech.ts",
-  "46": "Audit Checklist & Verification",
-  "47": "🚀 Panduan Deployment Lentera Baca",
-  "48": "vitest-setup.ts",
-  "49": "vitest.config.mts"
+  "45": "use-speech.ts"
 }
