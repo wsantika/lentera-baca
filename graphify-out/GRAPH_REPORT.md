@@ -1,16 +1,16 @@
 # Graph Report - lentera-baca  (2026-08-18)
 
 ## Corpus Check
-- 97 files · ~144,462 words
+- 101 files · ~145,077 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 620 nodes · 780 edges · 47 communities (36 shown, 11 thin omitted)
+- 646 nodes · 804 edges · 50 communities (38 shown, 12 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `09b3c69f`
+- Built from commit: `3e961772`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -58,6 +58,8 @@
 - Audio Assets — Lentera Baca
 - use-speech.ts
 - Audit Checklist & Verification
+- 🚀 Panduan Deployment Lentera Baca
+- vitest-setup.ts
 
 ## God Nodes (most connected - your core abstractions)
 1. `cn()` - 31 edges
@@ -67,9 +69,9 @@
 5. `MVP Accessibility & Usability QA` - 17 edges
 6. `compilerOptions` - 16 edges
 7. `8. Folder Structure` - 13 edges
-8. `ReadingPractice()` - 7 edges
-9. `include` - 7 edges
-10. `5. Main Features` - 7 edges
+8. `scripts` - 7 edges
+9. `ReadingPractice()` - 7 edges
+10. `include` - 7 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `RootLayout()` --calls--> `cn()`  [EXTRACTED]
@@ -86,27 +88,27 @@
 ## Import Cycles
 - None detected.
 
-## Communities (47 total, 11 thin omitted)
+## Communities (50 total, 12 thin omitted)
 
 ### Community 0 - "cn"
 Cohesion: 0.05
-Nodes (40): LearningStatePreview(), textSizeLabels, textSizeOrder, PageContainer(), PageContainerProps, clampPercentage(), getInitials(), ModeButton() (+32 more)
+Nodes (37): LearningStatePreview(), textSizeLabels, textSizeOrder, PageContainer(), PageContainerProps, clampPercentage(), getInitials(), ModeButton() (+29 more)
 
 ### Community 1 - "compilerOptions"
 Cohesion: 0.07
 Nodes (28): dom, dom.iterable, esnext, **/*.mts, .next/dev/types/**/*.ts, next-env.d.ts, .next/types/**/*.ts, node_modules (+20 more)
 
 ### Community 2 - "dependencies"
-Cohesion: 0.07
-Nodes (27): class-variance-authority, clsx, framer-motion, lucide-react, next, dependencies, class-variance-authority, clsx (+19 more)
+Cohesion: 0.05
+Nodes (37): class-variance-authority, clsx, framer-motion, lucide-react, next, dependencies, class-variance-authority, clsx (+29 more)
 
 ### Community 3 - "devDependencies"
-Cohesion: 0.08
-Nodes (25): eslint, eslint-config-next, devDependencies, eslint, eslint-config-next, tailwindcss, @tailwindcss/postcss, @types/node (+17 more)
+Cohesion: 0.07
+Nodes (29): eslint, eslint-config-next, jsdom, devDependencies, eslint, eslint-config-next, jsdom, tailwindcss (+21 more)
 
 ### Community 4 - "reading-practice.tsx"
 Cohesion: 0.06
-Nodes (31): LetterActions(), LetterActionsProps, LetterBottomBar(), LetterBottomBarProps, getWrappedIndex(), LetterLesson(), LetterProgressHeader(), LetterProgressHeaderProps (+23 more)
+Nodes (33): LetterActions(), LetterActionsProps, LetterBottomBar(), LetterBottomBarProps, getWrappedIndex(), LetterLesson(), LetterProgressHeader(), LetterProgressHeaderProps (+25 more)
 
 ### Community 5 - "components.json"
 Cohesion: 0.09
@@ -134,7 +136,7 @@ Nodes (40): 1. Aturan Pencegahan Halusinasi (Anti-Hallucination), 2. Prinsip Pro
 
 ### Community 11 - "learning-store.tsx"
 Cohesion: 0.12
-Nodes (24): AccessibilitySettingsEffect(), textSizeClasses, AppProviders(), ServiceWorkerRegister(), SyncProgressEffect(), SyncStatus, useSyncProgress(), addUniqueItem() (+16 more)
+Nodes (25): AccessibilitySettingsEffect(), textSizeClasses, AppProviders(), ServiceWorkerRegister(), SyncProgressEffect(), SyncStatus, useSyncProgress(), addUniqueItem() (+17 more)
 
 ### Community 12 - "CLAUDE.md"
 Cohesion: 0.06
@@ -216,25 +218,29 @@ Nodes (7): Audio Assets — Lentera Baca, Fallback, Panduan Konten, Panduan Reka
 Cohesion: 0.22
 Nodes (8): 1. Perlindungan Data Anak (Row Level Security), 2. Eksposur Data Publik (Leaderboard & Komunitas), 3. Iklan, Analitik Pihak Ketiga & Tautan Eksternal, 4. Kebijakan Privasi Orang Tua, Audit Checklist & Verification, Kesimpulan, Overview, 🛡️ Privacy & Child Safety Audit — MVP V2
 
+### Community 47 - "🚀 Panduan Deployment Lentera Baca"
+Cohesion: 0.25
+Nodes (7): 1. Arsitektur Deployment (GitFlow), 2. Setup Database (Supabase Cloud), 3. Setup Vercel (Next.js App), 4. Konfigurasi Branch Produksi di Vercel, 5. Verifikasi Deployment, 🚀 Panduan Deployment Lentera Baca, Selesai! 🎉
+
 ## Knowledge Gaps
-- **316 isolated node(s):** `$schema`, `style`, `rsc`, `tsx`, `config` (+311 more)
+- **331 isolated node(s):** `$schema`, `style`, `rsc`, `tsx`, `config` (+326 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `useLearningStore()` connect `learning-store.tsx` to `cn`, `home-dashboard.tsx`, `reading-practice.tsx`, `leaderboard-page-content.tsx`?**
-  _High betweenness centrality (0.023) - this node is a cross-community bridge._
-- **Why does `cn()` connect `cn` to `app/layout.tsx`, `leaderboard-page-content.tsx`?**
   _High betweenness centrality (0.022) - this node is a cross-community bridge._
+- **Why does `cn()` connect `cn` to `app/layout.tsx`, `reading-practice.tsx`, `leaderboard-page-content.tsx`?**
+  _High betweenness centrality (0.020) - this node is a cross-community bridge._
 - **Why does `Lentera Baca` connect `Lentera Baca` to `13. Installation & Environment Setup`, `14. Running the Project`, `20. Future Roadmap`, `7. System Architecture`, `12. PWA Support`, `3. Target Users`, `8. Folder Structure`, `5. Main Features`, `11. Accessibility Principles`, `18. Quality Assurance`, `10. State Management`?**
-  _High betweenness centrality (0.013) - this node is a cross-community bridge._
+  _High betweenness centrality (0.012) - this node is a cross-community bridge._
 - **What connects `$schema`, `style`, `rsc` to the rest of the system?**
-  _316 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _331 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `cn` be split into smaller, more focused modules?**
-  _Cohesion score 0.05129561078794289 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.0544464609800363 - nodes in this community are weakly interconnected._
 - **Should `compilerOptions` be split into smaller, more focused modules?**
   _Cohesion score 0.06896551724137931 - nodes in this community are weakly interconnected._
 - **Should `dependencies` be split into smaller, more focused modules?**
-  _Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05263157894736842 - nodes in this community are weakly interconnected._
